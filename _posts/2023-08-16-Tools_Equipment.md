@@ -12,7 +12,6 @@ type: devops
 ## Make Development Easy
 Learning Development tools, working with Projects, is the key to a <mark>rapid entry into Code/Code/Coding</mark>.  A Computer, Git, and an Code Editor are the starting points for coding.  Add Jupyter Notebooks (computational documents) and you bridge a Computer with Data Science.  The beauty of Jupyter Notebooks is that it creates a computational narrative, a document that allows code and data with visual analysis, hypothesis, and conjecture.
 
-### Equipment, accounts and tools
 - A laptop, <mark>bring a laptop to class every day with the Development Tools installed</mark> on it.  Preferred laptops are MacOS or Windows.  Computers using either MacOS, Windows, or Linux are requirements for the course.  Computers issued by the School, ie Chromebook, are not as effective because of the restrictions placed on adding software by PUSD.  <mark>If you only have access to a school issued Chromeboo, we will provide an option to access a Linux machine on AWS.</mark>
 - Sharing Code. <mark>GitHub</mark>, is the defacto hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere in the world.  Think of it as the Google Docs for Coders. We will clone/push/pull changes to and from GitHub, this is the server where we store and share code in the cloud, think of Google Docs but for Code.  
    - Setup GitHub with a personal ID, not a school ID.  [GitHub Account](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account).  
@@ -34,5 +33,8 @@ Learning Development tools, working with Projects, is the key to a <mark>rapid e
    - On Windows we will install Windows Subystem for Linux (WSL Ubuntu), then use ```sudo apt install` installs the packages (Java, Python) you need for Development that Ubuntu did not include.
    - On AWS Linux EC2 machines we will use ```sudo apt install``` for tools installation. An AWS Account for cloud computing will be required.  , account access will be provided by Teacher.  AWS Cloud Computing and Electric Cloud Computing (EC2's) will be used to run Development Enviornment from the Internet.
 
-   ## Hacks
-   > Setup and/or review all the items mentioned above.  If you don't have computer and tools access, you are effectually absent!!!  Installing tools can be a bit of a process, but it is fundamental to coding.
+## Hacks
+> Rreview all the items mentioned above and get started with setup.  It is very important to understand concepts of these tools and ask questions for clarity
+- If you don't have computer and tools access, you are effectually absent!!!  
+- Installing tools can be a bit of a process.  Read, review, and get started.  After you do it a little, it starts to become easy.
+- Do not fear your tools, <mark>love your tools'</mark>.  You will understand this more as you become a Developer.  Why do you think you might love your tools?
