@@ -38,4 +38,4 @@ Learning Development tools, working with Projects, is the key to a <mark>rapid e
 > Review all the items mentioned above and get started with setup.   Try to understand the concepts behind these tools and seek clarification when needed. Each student needs to take the setup process seriously and highlight that consistent access to the necessary tools is essential for active participation in the class.
 - If you don't have computer and tools access, you are effectually absent!!!  
 - Installing tools can be a bit of a process.  Read, review, and get started.  After you do it a little, it starts to become easy.
-- Do not fear your tools, <mark>love your tools'</mark>. Hhen you become familiar and proficient in using your tools, they become extensions of your abilities and empower you to accomplish Code/Code/Coding tasks more efficiently.
+- Do not fear your tools, <mark>love your tools'</mark>. Then you become familiar and proficient in using your tools, they become extensions of your abilities and empower you to accomplish Code/Code/Coding tasks more efficiently.
