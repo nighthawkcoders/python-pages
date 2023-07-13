@@ -21,7 +21,7 @@ Jekyll converts Markdown (.md) files into HTML. Behind the scenes of GitHub Page
 #### GitHub Pages index.md
 In GitHub Pages you can define code in Markdown. The index.md uses markdown to define a page about CompSci courses at Del Norte High School.
 
-    - Markdown fragment. The markdown fragment is written by the developer and is an example of how to start a home page using Markdown.
+- Markdown fragment. The markdown fragment is written by the developer and is an example of how to start a home page using Markdown.
 
     ```markdown
     ## Build your Home Page here 
@@ -36,7 +36,7 @@ In GitHub Pages you can define code in Markdown. The index.md uses markdown to d
 
     ![csse]({{site.baseurl}}/images/ccr.png)
     ```
-    - HTML conversion.  The HTML conversion of the Markdown fragment produced by GitHub Pages using Jekyll. This is programmatically converted from Markdown to HTML.
+- HTML conversion.  The HTML conversion of the Markdown fragment produced by GitHub Pages using Jekyll. This is programmatically converted from Markdown to HTML.
 
     ```html
     <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
@@ -57,13 +57,13 @@ In GitHub Pages you can define code in Markdown. The index.md uses markdown to d
 
 #### Images
 In GitHub Pages you can insert images in HTML or Markdown.  The Teacher finds \<img\> easier to work with for embedding links when trying to control size.  This example shows Markdown syntax for embedding images, but students can also use HTML syntax with the <img> tag.
-- Lookup !\[\]\(\) syntax for images in markdown guides
-- See index.md for "img" usage
+- See index.md for !\[\]\(\) syntax for images, or reference [Markdown images](https://www.markdownguide.org/basic-syntax/#images-1)
+- Or use "img" tage referencing [HTML images](https://www.w3schools.com/html/html_images.asp)
 
 
 #### Links
 HTML contains an ```<href>``` tag to create links. Students can use either HTML or Markdown syntax for links.
-- Look up HTML \<href\> or Markdown \[\]\(\) syntax.  These should become easy and familiar.
+- Look up [HTML links](https://www.w3schools.com/html/html_links.asp) \<href\> or [Markdown links](https://www.markdownguide.org/basic-syntax/#links) \[\]\(\) syntax.  These should become easy and familiar.
 
 
 ### Web Page Layout
@@ -87,4 +87,5 @@ plugins:
 ## Hacks
 At the end of this week you should select your theme and start customizing your page. 
 - Students should select a theme from the available options in the _config.yml file and start customizing their page accordingly.
-- Try altering index.md with image and links according to some of your personal interests, or make an outline for learning GitHub Pages. 
+- Try alter index.md with images and links according to some of your personal interests.  For instance, make an outline of your classes, school activities, and homework requirements.  
+- Google `Markdown Cheatsheet` or `W3Schools HTML Tutorial` for guideance.  Try to do something on your index.md not discussed in this blog.
