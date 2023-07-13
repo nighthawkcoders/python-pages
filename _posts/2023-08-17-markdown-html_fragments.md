@@ -10,10 +10,11 @@ type: ccc
 ---
 
 ## HTML Fragments and Markdown
-Building an entire frontend Web Application requires HTML, CSS and JavaScript. HTML contains the content, CSS adds the style, and adds interactivity and functionality to the web page.  In GitHub Pages, a lot of the frontend design work has been done for the user of the framework by selecting and using a theme.   Behind the scenes of GitHub Pages, Jekyll and Liquid build and programmatically construct each page specific to the fragments in a specific page.  
+Building an entire frontend web application requires HTML, CSS, and JavaScript. HTML is responsible for the content, CSS adds styling to the web page, and JavaScript adds functionality and interactivity.
 
-Jekyll, is the build framework, it takes our choice of theme in our _config.yml file, along with our Markdown, HTML, Notebook files to build a complete static website.  In GitHub Pages, Jekyll will construct HTML from a language called Markdown (.md files).  Markdown is a very simple way to get started with GitHub development.
+In GitHub Pages, Jekyll serves as the build framework. It takes our choice of theme specified in the `_config.yml` file, along with our Markdown, HTML, and notebook files, to construct a complete static website. A significant portion of the frontend design work has already been done for users through the selection and use of a theme.
 
+Jekyll converts Markdown (.md) files into HTML. Behind the scenes of GitHub Pages, Jekyll and Liquid build and programmatically construct each Markdown file into a specific web page. Markdown provides a straightforward way to start with GitHub Pages development. In a Markdown file, you can exclusively use Markdown syntax or incorporate HTML, CSS, and JavaScript based on your expertise and experience.
 
 ### Review these Fragments
 > The remainder of this document will describe and show code fragments to get the student developer ready for coding and commiting changes to GitHub.
