@@ -4,7 +4,7 @@ layout: post
 title: Markdown Student Page
 description: JavaScript, HTML, and CSS are coding lagnuages used by the GitHub Pages system. Using these languages enables student developer to add functionality to their GitHub pages site.
 categories: [1.B, C7.0]
-courses: { csse: {week: 0}, csp: {week: 0}, csa: {week: 0} }
+courses: { csse: {week: 1}, csp: {week: 0}, csa: {week: 0} }
 categories: [C4.3, C5.0]
 type: ccc
 ---
