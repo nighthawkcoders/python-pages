@@ -36,7 +36,7 @@ In GitHub Pages you can define code in Markdown. The index.md uses markdown to d
 
     ![csse]({{site.baseurl}}/images/ccr.png)
     ```
-    - HTML conversion.  The HTML conversion of the Markdown fragment produced by GitHub Pages using Jekyll. Thisis programmatically converted from Markdown to HTML.
+    - HTML conversion.  The HTML conversion of the Markdown fragment produced by GitHub Pages using Jekyll. This is programmatically converted from Markdown to HTML.
 
     ```html
     <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
