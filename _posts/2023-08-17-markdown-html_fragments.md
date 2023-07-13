@@ -10,16 +10,17 @@ type: ccc
 ---
 
 ## HTML Fragments and Markdown
-Building an entire frontend Web Application requires HTML, CSS and JavaScript.  In GitHub Pages, a lot of the frontend design work has been done for the user of the framework by selecting and using a theme.   Behind the scenes of GitHub Pages, Jekyll and Liquid build and programmatically construct each page specific to the fragments in a specific page.  
+Building an entire frontend Web Application requires HTML, CSS and JavaScript. HTML contains the content, CSS adds the style, and adds interactivity and functionality to the web page.  In GitHub Pages, a lot of the frontend design work has been done for the user of the framework by selecting and using a theme.   Behind the scenes of GitHub Pages, Jekyll and Liquid build and programmatically construct each page specific to the fragments in a specific page.  
 
 Jekyll, is the build framework, it takes our choice of theme in our _config.yml file, along with our Markdown, HTML, Notebook files to build a complete static website.  In GitHub Pages, Jekyll will construct HTML from a language called Markdown (.md files).  Markdown is a very simple way to get started with GitHub development.
 
 
 ### Review these Fragments
+> The remainder of this document will describe and show code fragments to get the student developer ready for coding and commiting changes to GitHub.
 #### GitHub Pages index.md
 In GitHub Pages you can define code in Markdown. The index.md uses markdown to define a page about CompSci courses at Del Norte High School.
 
-    - Markdown fragment written by Developer
+    - Markdown fragment. The markdown fragment is written by the developer and is an example of how to start a home page using Markdown.
 
     ```markdown
     ## Build your Home Page here 
@@ -34,7 +35,7 @@ In GitHub Pages you can define code in Markdown. The index.md uses markdown to d
 
     ![csse]({{site.baseurl}}/images/ccr.png)
     ```
-    - HTML conversion of fragment produced by GitHub pages using Jekyll
+    - HTML conversion.  The HTML conversion of the Markdown fragment produced by GitHub Pages using Jekyll. Thisis programmatically converted from Markdown to HTML.
 
     ```html
     <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
@@ -54,23 +55,35 @@ In GitHub Pages you can define code in Markdown. The index.md uses markdown to d
     ```
 
 #### Images
-In GitHub Pages you can insert images in HTML or Markdown.  The Teacher finds \<img\> easier to work with for embedding links when trying to control size.  But, the example shown uses markdown.
-- See index.md for "img" usage
+In GitHub Pages you can insert images in HTML or Markdown.  The Teacher finds \<img\> easier to work with for embedding links when trying to control size.  This example shows Markdown syntax for embedding images, but students can also use HTML syntax with the <img> tag.
 - Lookup !\[\]\(\) syntax for images in markdown guides
+- See index.md for "img" usage
 
 
 #### Links
-Look up \<href\> and \[\]\(\) syntax in both HTML and Markdown.  These should become easy and familiar.
+HTML contains an ```<href>``` tag to create links. Students can use either HTML or Markdown syntax for links.
+- Look up HTML \<href\> or Markdown \[\]\(\) syntax.  These should become easy and familiar.
 
 
 ### Web Page Layout
 A complete HTML Web Application is typically made off of a Layout and a series of Fragments (sometimes called templates).  
-- The design of GitHub pages allows us to change themes with the _config.yml file key/value, change the value to a [supported theme](https://pages.github.com/themes/).
-- Students often spend a large portions of their time <mark>writing custom CSS can be counter productive</mark>.  It is better, for now, to learn to extend or change a GitHub theme and work with fragments of Markdown or HTML.
+- The design of GitHub pages allows us to change themes with the _config.yml file key/value, change the value to a [supported theme](https://pages.github.com/themes/).  Here is a portion of the _config.yml, the ```#``` is a comment symbol.  Add a comment to midnight line, uncomment dinky line to try a new theme. Repeate process until you find something you like.  
+
+```yml
+# theme requirements
+remote_theme: pages-themes/midnight@v0.2.0
+# remote_theme: pages-themes/dinky@v0.2.0
+# remote_theme: pages-themes/minimal@v0.2.0
+# remote_theme: pages-themes/hacker@v0.2.0
+# remote_theme: pages-themes/cayman@v0.2.0
+# remote_theme: pages-themes/time-machine@v0.2.0
+plugins:
+- jekyll-remote-theme
+```
+- Extensive customization of CSS may require advanced knowledge and can be time-consuming for beginners. I have observed many Students spending  <mark>to much of their time writing custom CSS </mark>.  It is better, for now, to learn to extend or change a GitHub theme and work with fragments of Markdown or HTML.
 
 
 ## Hacks
 At the end of this week you should select your theme and start customizing your page. 
-- Try creating setting up and running a student web page on what you intend to do.
-- Try altering _config.yml for a different theme.  This is a great opportunity to explore files and apply meaning, purpose, and function to files.
-- Try altering index.md with image and links according to some of your personal interests, or make a plan for learning GitHub Pages. 
+- Students should select a theme from the available options in the _config.yml file and start customizing their page accordingly.
+- Try altering index.md with image and links according to some of your personal interests, or make an outline for learning GitHub Pages. 
