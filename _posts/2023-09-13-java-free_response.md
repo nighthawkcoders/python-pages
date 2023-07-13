@@ -11,7 +11,7 @@ type: collab
 The goal of FRQ mini-labs is to help you explore, learn to code, and establish the abililty to communicate and collaborate with you team members.
 
 ### Continuous Communication is Key
-If there is one important skill you quickly need to pick up on at the start of your Project Journey, it is to: Communicate, communicate, communicaaaaate!!!
+If there is one important skill you quickly need to pick up on at the start of your Project Journey, it is to: code, communicate, commit, communicaaaate!!!
 
 I’ll repeat it as much as it needs for it to sink into your brain. Communicate your work as often as need be! The pace can be fast in tech, so if you want to make sure all your work does not go for naught, then communication is required.
 
