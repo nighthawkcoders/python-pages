@@ -29,11 +29,11 @@ How can you do that?
     Whenever you stumble on a noteworthy insight, prepare and send. It is expected that these preparation and shares will help you find holes, inconcistencies, sort out misunderstandings on key concepts, etc.
 
 
-2. Make sure to find the right sharing cadence for you, team members, and live reviews.
+2. Make sure to find the right sharing cadence for you, team members, and stake holders.
 
-    Iterate over different sharing frequencies until you find the right one for you and your out stakeholders.  Sharing at the end or when finished is THE WRONG ANSWER.  Remember, everything in tech is a “Work in Progress”.  
+    Iterate over different sharing frequencies until you find the right one for you and your stakeholders.  Sharing at the end or when finished is THE WRONG ANSWER.  Remember, everything in tech is a “Work in Progress”.  
     
-    In school, we can go way to long working hard in a bubble only sharing when we think we are done. In tech, no one has time for that. So pick up the sharing pace and share frequently.
+    In school, we can go way to long working hard in a bubble only sharing when we think we are done. Sharing includes committing code frequently.  In tech, no one has time for late sharing and late commits. So pick up the sharing pace, share frequently and commit frequently!
 
 ### FRQ Hacks
 > During the year we need to learn the four types of FRQs.
