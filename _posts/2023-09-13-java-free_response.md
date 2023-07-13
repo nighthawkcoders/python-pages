@@ -11,31 +11,25 @@ type: collab
 The goal of FRQ mini-labs is to help you explore, learn to code, and establish the abililty to communicate and collaborate with you team members.
 
 ### Continuous Communication is Key
-If there is one important skill you quickly need to pick up on at the start of your Project Journey, it is to: plan, communicate, code, communicate, commit, communicate, share, communicate!!!  
+If there is one important skill you need to quickly pick up at the start of your Project Journey, it is to plan, communicate, code, communicate, commit, communicate, and share—communicate! Let me reiterate it until it sinks into your brain: <mark>communicate your work as often as needed!</mark> The tech industry moves at a fast pace, so if you want to ensure that all your hard work doesn't go to waste, communication is essential.
 
-I’ll repeat it as much as it needs to be repeated for it to sink into your brain. Communicate your work as often as need be! The pace can be fast in tech, so if you want to make sure all your work does not go for naught, then communication is required.
+So, how can you achieve that? Here are a few steps:
+1. Regularly update your team members on your progress, even if you're not finished yet. One effective way to do this is by sharing small nuggets of the most interesting pieces or insights about your work with the relevant people, such as your pair programmer, team, cross over team, and teacher. However, ensure that you organize or prepare beforehand. 
 
-How can you do that?
-1. Update your team members regularly on your progress, even if you’re not finished yet. 
+    You can do this through:
 
-    One effective way you can do this is by sharing small nuggets (the most interesting pieces or insights on work) with the relevant people (pair programmer, team, cross over team, and teacher).  
+    - Shareout messages via platforms like Slack, Discord, or Emails.
+    - Pair meetings.
+    - Standup meetings.
+    - Crossover reviews.
+    - Live reviews with your teacher.
 
-    Just make sure to organize or prepare beforehand. You can do that via:
-
-    - Shareout messages: Slack, Discord, Emails…
-    - Pair meetings 
-    - Standup meetings
-    - Crossover reviews
-    - Live reviews with Teacher
-
-    Whenever you stumble on a noteworthy insight, prepare thoughts and send. It is expected that preparation and shares will help you find holes, inconcistencies, sort out misunderstandings on key concepts, and more.  If these communication are not noticed, you are not collaborating.
+    Whenever you come across a noteworthy insight, take the time to prepare your thoughts and share them. The act of preparation and sharing will help you identify gaps, inconsistencies, clarify misunderstandings on key concepts, and more. If these communications go unnoticed, you are not effectively collaborating.
 
 
-2. Make sure to find the right sharing cadence for you, team members, and stake holders.
+2. Find the right sharing cadence for you, your team members, and stakeholders. Experiment with different sharing frequencies until you discover the one that works best for everyone. Sharing only at the end or when you think you are done is the wrong approach. Remember, everything in tech is a "Work in Progress." Iteration is the path through which great ideas progress into reality.
 
-    Iterate over different sharing frequencies until you find the right one for you and your stakeholders.  Sharing at the end or when finished is THE WRONG ANSWER.  Remember, everything in tech is a “Work in Progress”.  Iteration is how great ideas become progress into reality.
-    
-    In school, we can go way to long working hard in a bubble only sharing when we think we are done. Sharing includes committing code frequently.  In tech, no one has time for late sharing and late commits. So pick up the sharing pace, share frequently and commit frequently!
+    In school, it's common to work in isolation for extended periods and share only when we believe we are finished. However, sharing also includes committing code frequently. In the tech industry, there is no time for delayed sharing or late commits. Therefore, increase your sharing pace, do it frequently, and commit your work often!
 
 ### FRQ Hacks
 > During the year we need to learn the four types of FRQs.
