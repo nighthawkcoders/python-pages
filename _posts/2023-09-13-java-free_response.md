@@ -11,9 +11,9 @@ type: collab
 The goal of FRQ mini-labs is to help you explore, learn to code, and establish the abililty to communicate and collaborate with you team members.
 
 ### Continuous Communication is Key
-If there is one important skill you quickly need to pick up on at the start of your Project Journey, it is to: code, communicate, commit, communicaaaate!!!
+If there is one important skill you quickly need to pick up on at the start of your Project Journey, it is to: plan, communicate, code, communicate, commit, communicate, share, communicate!!!  
 
-I’ll repeat it as much as it needs for it to sink into your brain. Communicate your work as often as need be! The pace can be fast in tech, so if you want to make sure all your work does not go for naught, then communication is required.
+I’ll repeat it as much as it needs to be repeated for it to sink into your brain. Communicate your work as often as need be! The pace can be fast in tech, so if you want to make sure all your work does not go for naught, then communication is required.
 
 How can you do that?
 1. Update your team members regularly on your progress, even if you’re not finished yet. 
@@ -22,16 +22,18 @@ How can you do that?
 
     Just make sure to organize or prepare beforehand. You can do that via:
 
-    - Messages: Slack, Discord, Emails…
-    - Preparation for share-outs messages, standup team meets, live reviews
-    - 1:1 meetings 
+    - Shareout messages: Slack, Discord, Emails…
+    - Pair meetings 
+    - Standup meetings
+    - Crossover reviews
+    - Live reviews with Teacher
 
-    Whenever you stumble on a noteworthy insight, prepare and send. It is expected that these preparation and shares will help you find holes, inconcistencies, sort out misunderstandings on key concepts, etc.
+    Whenever you stumble on a noteworthy insight, prepare thoughts and send. It is expected that preparation and shares will help you find holes, inconcistencies, sort out misunderstandings on key concepts, and more.  If these communication are not noticed, you are not collaborating.
 
 
 2. Make sure to find the right sharing cadence for you, team members, and stake holders.
 
-    Iterate over different sharing frequencies until you find the right one for you and your stakeholders.  Sharing at the end or when finished is THE WRONG ANSWER.  Remember, everything in tech is a “Work in Progress”.  
+    Iterate over different sharing frequencies until you find the right one for you and your stakeholders.  Sharing at the end or when finished is THE WRONG ANSWER.  Remember, everything in tech is a “Work in Progress”.  Iteration is how great ideas become progress into reality.
     
     In school, we can go way to long working hard in a bubble only sharing when we think we are done. Sharing includes committing code frequently.  In tech, no one has time for late sharing and late commits. So pick up the sharing pace, share frequently and commit frequently!
 
