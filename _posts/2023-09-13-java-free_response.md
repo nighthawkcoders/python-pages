@@ -33,16 +33,14 @@ So, how can you achieve that? Here are a few steps:
 
 ### FRQ Hacks
 > During the year we need to learn the four types of FRQs.
-
 - FRQ No. 1: Methods and Control Structures
     - Pick a question of type 01 from one of the years posted on the former EXAM page.  Solve the problem, including missing pieces in a Jupyter Notebook.  
     - Make this a quality blog.  My suggestion each member of team do a different FRQs, to make reviews and grading more valuable.
     - Browse through multiple questions, find a question that may be have future PBL interest.
-
-> Repeat for other FRQ Types
-- FRQ No. 2: Classes
-- FRQ No. 3: Array/ArrayList
-- FRQ No. 4: 2D Array 
+- Repeat for other FRQ Types
+    - FRQ No. 2: Classes
+    - FRQ No. 3: Array/ArrayList
+    - FRQ No. 4: 2D Array 
 
 ### Regarding Array/ArrayList/2D Arrays
 > It is really import that each student learn to iterate through Arrays, ArrayLists, and 2D arrays.  On these FRQs, make sure you do some extra work to highlight these concepts, if they are not present in the FRQ.
