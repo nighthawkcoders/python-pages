@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Free Response Mini-lab project
+title:  FRQ Mini-lab project
 description: The focus of this mini-lab is preparing for the FRQ question types tested by College Board.  A great deal of energy should be spent on researching and preparing a lesson on each topic.
 courses: { csa: {week: 4}}
 categories: []
