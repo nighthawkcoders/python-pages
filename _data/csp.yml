@@ -1,12 +1,74 @@
 # CSP course meta data
 Unit1:
   title: Introduction to Tools and Resources
-  description: The initial weeks focus on introducing Tools, Pair Programming, and the AP Resources that we plan to use throughout the year. At the end of Weeks 0-3, students will be exposed to blogging with GitHub Pages; developing with Jupyter Notebooks, Python, JavaScript, HTML, and Code.org AppLab; working with AP classroom and becoming familiar with Create Performance Task project requirements.
+  description: The initial weeks focus on introducing Tools, Pair Programming, and the AP Resources that we plan to use throughout the year. At the end of Weeks 0-3, students will be exposed to blogging with GitHub Pages; developing with Jupyter Notebooks, Python, JavaScript, HTML; working with AP classroom and becoming familiar with Create Performance Task project requirements.
+  illustration: |
+    +-----------------+
+    | Laptop, OS      |
+    | Tool Setup      | 
+    +-----------------+
+       |
+       | Install VS Code, Programming Languages
+       v
+    +-----------------+
+    | VS Code, Develop|
+    | Code Editor     | 
+    +-----------------+
+       |
+       | Code, Build, Test, Debug
+       v
+    +-----------------+
+    | VS Code, Git    |
+    | Version Control |       | 
+    +-----------------+
+       |
+       | Commit local versions
+       v
+    +-----------------+
+    | VS Code, Project|
+    | GitHub Sync     |
+    +-----------------+
+       |
+       | Push changes to cloud Repository
+       v
+    +-----------------+
+    | GitHUb,  Collab |
+    | Shared Code     |
+    +-----------------+
   start: 0
   end: 3
 Unit2:
   title: Introduction to Web Development
-  description: Websites are made up of several key parts. Frontend, Backend, Data and Deployment.  The focus for these weeks is to enable students to perform the aspects of constructing and deploying a simple Website. There will be several lectures during this period to provide you with concepts on how to build a WebSite, including working with data from a backend server.
+  description: Websites are made up of several key parts. Frontend, Backend, Data, and Deployment. The focus for these weeks is to enable students to perform the aspects of constructing and deploying a simple Website. There will be several lectures during this period to provide you with concepts on how to build a Website, including working with data from a backend server.
+  illustration: |
+    +--------------+
+    |  JavaScript  |
+    |   Frontend   |
+    +--------------+
+            |
+            | Sends HTTP requests/responses
+            |
+    +--------------+
+    | GitHub Pages |
+    | (Presentation|
+    |    and Style)|
+    +--------------+
+            |
+            | Sends HTTP requests/responses
+            |
+    +---------------+
+    |  AWS EC2      |
+    | Python Backend|
+    |  Analysis     |
+    +---------------+
+            |
+            | Communicates with
+            | AWS Services (e.g., Databases)
+            |
+    +--------------+
+    | AWS Services |
+    | (Databases)  |
+    +--------------+
   start: 4
   end: 7
 Unit3:

@@ -30,6 +30,12 @@ Load all posts
 </h2>
 <p>  {{ unitData.description }} </p>
 
+{% if unitData.illustration %}
+<pre>
+  <p>{{ unitData.illustration }}</p>
+</pre>
+{% endif %}
+
 {% assign start = unitData.start %}
 {% assign end = unitData.end %}
 
