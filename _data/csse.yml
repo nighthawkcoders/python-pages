@@ -1,7 +1,50 @@
-# CSP course meta data
+# course illustrations
+introduction_tools: &introduction_tools |
+    +-----------------+
+    | Laptop, OS      |
+    | Tool Setup      | 
+    +-----------------+
+       |
+       | VS Code, Anaconda, Jupyter
+       v
+    +-----------------+
+    | VS Code, Develop|
+    | Code Editor     | 
+    +-----------------+
+       |
+       | Write code, build, run localhost, test, debug
+       v
+    +-----------------+
+    | VS Code, Git    |
+    | Version Control |       | 
+    +-----------------+
+       |
+       | Commit local versions, track change
+       v
+    +-----------------+
+    | VS Code, Project|
+    | GitHub Sync     |
+    +-----------------+
+       |
+       | Push changes to cloud Repository
+       v
+    +-----------------+
+    | GitHub,  Collab |
+    | Shared Code     |
+    +-----------------+
+       |
+       | Actions, Jekyll build
+       v
+    +-----------------+
+    | GitHub Pages    |
+    | Showcase Project|
+    +-----------------+
+
+# CSSE course meta data
 Unit1:
-  title: Introduction to Tools, Blogging, Markdown, HTML and CSS
-  description: The initial weeks focus on introducing Tools, Pair Programming, and tools we will using throughout the year. At the end of the first unit, students will be blogging on GitHub and creating GitHub Pages; be introduced to Jupyter Notebooks and VSCode, coding with JavaScript, HTML, and CSS
+  title: Tools and Software Development Processes
+  description: By the end of Weeks 0-3, students will have gained practical experience in blogging, coding with Jupyter Notebooks, and GitHub Pages; learning will begin with Linux, Markdown, HTML, and JavaScript. Students will establish foundation using essential tools and software development processes to support their coding journey.
+  illustration: *introduction_tools
   start: 0
   end: 3
 Unit2:

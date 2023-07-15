@@ -5,14 +5,14 @@ introduction_tools: &introduction_tools |
     | Tool Setup      | 
     +-----------------+
        |
-       | Install VS Code, Programming Languages, Configurations.
+       | VS Code, Anaconda, Jupyter, Python
        v
     +-----------------+
     | VS Code, Develop|
     | Code Editor     | 
     +-----------------+
        |
-       | Writing code, build, test, debug
+       | Code, build, test, debug
        v
     +-----------------+
     | VS Code, Git    |
@@ -75,7 +75,7 @@ web_dev_layers: &web_dev_layers |
 # CSP course meta data
 Unit1:
   title: Tools and Software Development Processes
-  description: By the end of Weeks 0-3, students will have gained practical experience in blogging, coding with Jupyter Notebooks, and GitHub Pages; learning will begin with Linux, Python, Markdown, HTML, and JavaScript. Students They will establish foundation using essential tools and software development processes to support their coding journey.
+  description: By the end of Weeks 0-3, students will have gained practical experience in blogging, coding with Jupyter Notebooks, and GitHub Pages; learning will begin with Linux, Python, Markdown, HTML, and JavaScript. Students will establish foundation using essential tools and software development processes to support their coding journey.
   illustration: *introduction_tools
   start: 0
   end: 3
