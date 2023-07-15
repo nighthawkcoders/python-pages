@@ -1,28 +1,25 @@
-# CSP course meta data
-Unit1:
-  title: Introduction to Tools and Resources
-  description: The initial weeks focus on introducing Tools, Pair Programming, and the AP Resources that we plan to use throughout the year. At the end of Weeks 0-3, students will be exposed to blogging with GitHub Pages; developing with Jupyter Notebooks, Python, JavaScript, HTML; working with AP classroom and becoming familiar with Create Performance Task project requirements.
-  illustration: |
+# course illustrations
+introduction_tools: &introduction_tools |
     +-----------------+
     | Laptop, OS      |
     | Tool Setup      | 
     +-----------------+
        |
-       | Install VS Code, Programming Languages
+       | Install VS Code, Programming Languages, Configurations.
        v
     +-----------------+
     | VS Code, Develop|
     | Code Editor     | 
     +-----------------+
        |
-       | Code, Build, Test, Debug
+       | Writing code, build, test, debug
        v
     +-----------------+
     | VS Code, Git    |
     | Version Control |       | 
     +-----------------+
        |
-       | Commit local versions
+       | Commit local versions, track change
        v
     +-----------------+
     | VS Code, Project|
@@ -32,43 +29,60 @@ Unit1:
        | Push changes to cloud Repository
        v
     +-----------------+
-    | GitHUb,  Collab |
+    | GitHub,  Collab |
     | Shared Code     |
     +-----------------+
+       |
+       | Actions, Jekyll build
+       v
+    +-----------------+
+    | GitHub Pages    |
+    | Showcase Project|
+    +-----------------+
+
+web_dev_layers: &web_dev_layers |
+    +---------------+
+    | GitHub Pages  |
+    | Design, Layout|
+    |   Frontend    |
+    +---------------+
+          |
+          | User presentation, style 
+          | Actions
+          v
+    +--------------+
+    |  JavaScript  |
+    | Logic/Events |
+    +--------------+
+          |
+          | Functionality, interactivity
+          | Sends HTTP requests/responses
+          v
+    +----------------+
+    | AWS EC2 Server |
+    | Python Backend |
+    +----------------+
+          |
+          | Server-Side Proccessing
+          | Analysis Engines
+          | Communicate with Services
+          v
+    +----------------+
+    |  AWS Services  |
+    |   Store Data   |
+    +----------------+
+
+# CSP course meta data
+Unit1:
+  title: Tools and Software Development Processes
+  description: By the end of Weeks 0-3, students will have gained practical experience in blogging, coding with Jupyter Notebooks, and GitHub Pages; learning will begin with Linux, Python, Markdown, HTML, and JavaScript. Students They will establish foundation using essential tools and software development processes to support their coding journey.
+  illustration: *introduction_tools
   start: 0
   end: 3
 Unit2:
-  title: Introduction to Web Development
-  description: Websites are made up of several key parts. Frontend, Backend, Data, and Deployment. The focus for these weeks is to enable students to perform the aspects of constructing and deploying a simple Website. There will be several lectures during this period to provide you with concepts on how to build a Website, including working with data from a backend server.
-  illustration: |
-    +--------------+
-    |  JavaScript  |
-    |   Frontend   |
-    +--------------+
-            |
-            | Sends HTTP requests/responses
-            |
-    +--------------+
-    | GitHub Pages |
-    | (Presentation|
-    |    and Style)|
-    +--------------+
-            |
-            | Sends HTTP requests/responses
-            |
-    +---------------+
-    |  AWS EC2      |
-    | Python Backend|
-    |  Analysis     |
-    +---------------+
-            |
-            | Communicates with
-            | AWS Services (e.g., Databases)
-            |
-    +--------------+
-    | AWS Services |
-    | (Databases)  |
-    +--------------+
+  title: Web Development Layers
+  description: DuriDuring Weeks 4-7, students will delve into the layers used in Web Development. They will learn about the key components that make up websites, including the Frontend, Backend, and Data layers. The main focus of this unit is to empower students to explore the development and deployment of a simple website. Throughout this period, there will be several lectures that provide ideas and concepts on how to build different components of a website, including sending and receiving data from a backend server.
+  illustration: *web_dev_layers
   start: 4
   end: 7
 Unit3:
