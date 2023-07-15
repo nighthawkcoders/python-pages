@@ -1,12 +1,89 @@
+# course illustrations
+introduction_tools: &introduction_tools |
+    +-----------------+
+    | Laptop, OS      |
+    | Tool Setup      | 
+    +-----------------+
+       |
+       | VS Code, Anaconda, Jupyter, Java Kernel
+       v
+    +-----------------+
+    | VS Code, Develop|
+    | Code Editor     | 
+    +-----------------+
+       |
+       | Code, build, test, debug
+       v
+    +-----------------+
+    | VS Code, Git    |
+    | Version Control |       | 
+    +-----------------+
+       |
+       | Commit local versions, track change
+       v
+    +-----------------+
+    | VS Code, Project|
+    | GitHub Sync     |
+    +-----------------+
+       |
+       | Push changes to cloud Repository
+       v
+    +-----------------+
+    | GitHub,  Collab |
+    | Shared Code     |
+    +-----------------+
+       |
+       | Actions, Jekyll build
+       v
+    +-----------------+
+    | GitHub Pages    |
+    | Showcase Project|
+    +-----------------+
+
+web_dev_layers: &web_dev_layers |
+    +---------------+
+    | GitHub Pages  |
+    | Design, Layout|
+    |   Frontend    |
+    +---------------+
+          |
+          | User presentation, style 
+          | Actions
+          v
+    +--------------+
+    |  JavaScript  |
+    | Logic/Events |
+    +--------------+
+          |
+          | Functionality, interactivity
+          | Sends HTTP requests/responses
+          v
+    +----------------+
+    | AWS EC2 Server |
+    |  Java / Spring |
+    |    Backend     |
+    +----------------+
+          |
+          | Server-Side Proccessing
+          | Analysis Jars and Engines
+          | Communicate with Services
+          v
+    +----------------+
+    |  AWS Services  |
+    |   Store Data   |
+    +----------------+
+
 # CSP course meta data
 Unit1:
-  title: Introduction to Tools and Resources
-  description: To learn Java and build skills for Career Technical Education students will quickly immerse into Tools and Resources for Java Development and Blogging.  These early weeks will focus on the Development Environment, GitHub Pages Blogging platform, AP Classroom resources, and Programming Java with VSCode and Jupyter Notebooks.
+  title: Tools and Software Development Processes
+  description: Students should have experience in blogging, coding with Jupyter Notebooks, and GitHub Pages; understnding of Linux, Python, Markdown, HTML, and JavaScript is expected. Students have previously  established foundation using essential tools and software development processes.  Weeks 0-3 will provide a quick review and students will start their Java coding journey.
+  illustration: *introduction_tools
   start: 0
   end: 3
 Unit2:
   title: Java Mini-labs
-  description: Students have been introduced to Classes and Inheritance in Python and JavaScript.  In this unit students will become more familiar with Java development and classes through mini-labs.  These labs will focus on AP required aspects of Java, additionally they can be used as code to support the backend of a Desktop App or WebSite. This unit concludes with 4 person Project Plan, kicking off the end of trimester N@TM project.   Students will be able to write code that completes full stack process of Frontend talking to the Java backend.
+  description: Students have been introduced to Classes and Inheritance in Python and JavaScript.  In this unit students will become more familiar with Java development and classes through Mini-labs.  These labs will focus on AP required aspects of Java, additionally it is expected that student build a Java Spring backend WebSite. 
+  illustration: *web_dev_layers
   start: 4
   end: 7
 Unit3:

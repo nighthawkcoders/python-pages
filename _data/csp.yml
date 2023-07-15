@@ -60,11 +60,12 @@ web_dev_layers: &web_dev_layers |
           v
     +----------------+
     | AWS EC2 Server |
-    | Python Backend |
+    | Python / Flask |
+    |     Backend    |
     +----------------+
           |
           | Server-Side Proccessing
-          | Analysis Engines
+          | Analysis Modules and Engines
           | Communicate with Services
           v
     +----------------+
