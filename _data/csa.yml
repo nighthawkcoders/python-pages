@@ -82,13 +82,13 @@ Unit1:
   end: 3
 Unit2:
   title: Java Mini-labs
-  description: Students have been introduced to Classes and Inheritance in Python and JavaScript.  In this unit students will become more familiar with Java development and classes through Mini-labs.  These labs will focus on AP required aspects of Java, additionally it is expected that student build a Java Spring backend WebSite. 
-  illustration: *web_dev_layers
+  description: Students have been introduced to Classes and Inheritance in Python and JavaScript.  In this unit students will become more familiar with Java development and classes through Mini-labs.  These labs will introduce AP required aspects of Java, FRQ requirements, and start looking at College Boards 10 Units.
   start: 4
   end: 7
 Unit3:
   title:  Individual/Team Projects and N@tM
-  description: This Units requirement is to to build individual development skills and a Team Frontend and Backend project in Java.  By the end of this unit students will be aware of all the College Board Units and FRQ types.   Student will participate in live grading of peers work.  Fastpages Blogs and Jupyter Notebooks are required for all individuals.   By the end of this section you should have examples, study materials, and code that show a great deal of effort, understanding, and competency.
+  description: In this unit students will continue to become familiar with Java development and classes as they transition from Console / Desktop Development and learn Web Development.  Coding will focus on Java Spring backend WebSite and frameworks that suppot receiving, responding to requests. 
+  illustration: *web_dev_layers
   start: 8
   end: 12
 Unit4:
