@@ -40,6 +40,88 @@ introduction_tools: &introduction_tools |
     | Showcase Project|
     +-----------------+
 
+college_board_10: &college_board_10 |
+  College Board Units and Course Requirements
+  ----------------------      
+    Fundamentals of Programming
+    +------------------+
+    | CB Unit 1           |
+    | Primitive Types  | --> Types appear in Code
+    | 2.5%-5%          |
+    +------------------+
+    +------------------+
+    | Unit 3           |
+    | Booleans and Ifs | --> Understand De Morgan's Law
+    | 15%-17.5%        |
+    +------------------+
+    +------------------+
+    | Unit 4           |
+    | Iteration        | --> String Iteration, repeat until expression
+    | 17.5%-22.5%      |
+    +------------------+
+    +------------------+
+    | Unit 10 - Part 1 |
+    | Recursion        | --> Base case and recursive call
+    | 5%-7.5%          |
+    +------------------+
+            |
+    Fundamentals of Java
+    +------------------+
+    | Unit 2           |
+    | Using Objects    | --> Instance vs Static, Methods, Math Class 
+    | 5%-7.5%          |
+    +------------------+
+    +------------------+
+    | Unit 5           |
+    | Writing Classes  | --> Diagram a Class, constructor, setters, ... 
+    | 5%-7.5%          |
+    +------------------+
+    +------------------+
+    | Unit 9           |
+    | Inheritance      | --> Extend class, super, this, ...
+    | 5%-7.5%          |
+    +------------------+
+            |
+    College Board Data Structures
+    +------------------+
+    | Unit 6           |
+    | Array            | --> Linear data structure, fixed size
+    | 5%-7.5%          |
+    +------------------+
+    +------------------+
+    | Unit 7           |
+    | ArrayList        | --> Linear and dynamic size, Collection Framework 
+    | 2.5%-7.5%        |
+    +------------------+
+    +------------------+
+    | Unit 8           |
+    | 2D Array         | --> 2D Linear dat structure, fixed size
+    | 7.5%-10%         |
+    +------------------+
+    +------------------+
+    | Unit 10 - Part 2 |
+    | Sorts            | --> Bubble, Selection, Insertion, Merge
+    | 5%-7.5%          |
+    +------------------+
+            |            
+    Articulated Data Structures
+    +------------------+
+    | Java Fundamental |
+    | HashMap          | --> Key-value data structure
+    | B or better      |
+    +------------------+
+    +------------------+
+    | Algorithmic      |
+    | Queue,Stack,...  | --> Collections Framework
+    | B or better      |
+    +------------------+
+    +--------------------+
+    | Abstract Data Type |
+    | Graph              | --> Nodes, Vertices, Edges
+    | B or better        |
+    +--------------------+
+
+
 web_dev_layers: &web_dev_layers |
     +---------------+
     | GitHub Pages  |
@@ -65,15 +147,15 @@ web_dev_layers: &web_dev_layers |
     +----------------+
           |
           | Server-Side Proccessing
-          | Analysis Jars and Engines
-          | Communicate with Services
+          | Analysis, POJOs, ORM, JPA
+          | Communicate with AWS Services
           v
     +----------------+
     |  AWS Services  |
     |   Store Data   |
     +----------------+
 
-# CSP course meta data
+# CSA course meta data
 Unit1:
   title: Tools and Software Development Processes
   description: Students should have experience in blogging, coding with Jupyter Notebooks, and GitHub Pages; understnding of Linux, Python, Markdown, HTML, and JavaScript is expected. Students have previously  established foundation using essential tools and software development processes.  Weeks 0-3 will provide a quick review and students will start their Java coding journey.
@@ -83,17 +165,18 @@ Unit1:
 Unit2:
   title: Java Mini-labs
   description: Students have been introduced to Classes and Inheritance in Python and JavaScript.  In this unit students will become more familiar with Java development and classes through Mini-labs.  These labs will introduce AP required aspects of Java, FRQ requirements, and start looking at College Boards 10 Units.
+  illustration: *college_board_10
   start: 4
   end: 7
 Unit3:
-  title:  Individual/Team Projects and N@tM
-  description: In this unit students will continue to become familiar with Java development and classes as they transition from Console / Desktop Development and learn Web Development.  Coding will focus on Java Spring backend WebSite and frameworks that suppot receiving, responding to requests. 
+  title:  Individual/Team Projects, N@tM
+  description: In this unit students will continue to become familiar with Java development and classes as they learn Web Development using the Spring Framework.  Coding will focus on receiving, working with data, and responding to requests.  This will teach key Java concepts while learning Plain Old Java Objects (POJOs), Object Relational Model (ORM) and Java Persistent API (JPA)
   illustration: *web_dev_layers
   start: 8
   end: 12
 Unit4:
   title: College Board Teaching and Study 
-  description: This period will complete formal teaching and grading on the basics of the 10 units.  Also, there will be a tech talk and homework on each FRQ type customized for Team PBL idea.
+  description: This period will perform formal teaching and grading on the 10 units by College Board.  Student teams will give tech talk to class and provide Hacks for the key areas in the Unit.  Students need to make sure the teach key College Board questions by review online materials and review plan with Teacher.  Student teams need to coordinate Hack turn in and grade homework.
   start: 13
   end: 16
 Unit5:
