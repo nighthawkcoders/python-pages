@@ -173,7 +173,7 @@ Sprint2:
   end: 7
 Sprint3:
   title:  Individual/Team Projects, N@tM
-  description: In this Sprint students will continue to become familiar with Java development and classes as they learn Web Development using the Spring Framework.  Coding will focus on receiving, working with data, and responding to requests.  This will teach key Java concepts while learning Plain Old Java Objects (POJOs), Object Relational Model (ORM) and Java Persistent API (JPA)
+  description: In this Sprint students will continue to become familiar with Java development and classes as they learn Web Development using the Spring Framework.  Coding will focus on receiving requests, working with data, and responding to requests.  This will teach key Java concepts while learning Plain Old Java Objects (POJOs), Object Relational Model (ORM) and Java Persistent API (JPA)
   illustration: *web_dev_layers
   start: 8
   end: 12
