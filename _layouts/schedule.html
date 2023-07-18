@@ -31,9 +31,14 @@ Load all posts
 <p>  {{ unitData.description }} </p>
 
 {% if unitData.illustration %}
-<pre>
-  <p>{{ unitData.illustration }}</p>
-</pre>
+<details>
+  <summary>Illustration</summary>
+
+  <pre>
+    <p>{{ unitData.illustration }}</p>
+  </pre>
+</details>
+<br/>
 {% endif %}
 
 {% assign start = unitData.start %}

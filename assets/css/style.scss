@@ -87,3 +87,12 @@
     @extend .button;
     background-color: #e70f0f;
   }
+
+  details summary::before {
+    content: '+';
+    padding-right: 0.5rem;
+  }
+
+  details[open] summary::before {
+    content: '-';
+  }
