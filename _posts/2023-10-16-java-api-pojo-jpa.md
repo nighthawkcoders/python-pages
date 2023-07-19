@@ -5,6 +5,43 @@ description: Define a POJO, essentially an class with @Entity properties that en
 categories: [1.A, 3.A, 3.B, C4.5, C4.7]
 courses: { csa: {week: 10} }
 type: ccc
+spring_api_orm: &spring_api_orm |
+  Spring API and ORM
+  ------------------
+    +-------------------+
+    |   API Controller  |-- Developer defines Request Mappings
+    |     Request       |----- @PathVariable are received
+    |     JPA call      |----- @Autowired method is called
+    |     Respone       |----- ResponseEntity<> wraps data from JPA (ie JSON)
+    +-------------------+
+       |
+       | JPA Methods
+       v
+    +-----------------+
+    |  JPA            |-- Developer defines Database Queries
+    |   Java          | ----- a.) JPA built in (long names)
+    |   Persistent    | ----- b.) SQL native queries
+    |   API           | 
+    +-----------------+
+       |
+       | Database Access Methods
+       v
+    +-----------------+
+    |  ORM            | -- Spring layers supporting Database Framework
+    |   Object        | ----- Behind the scene managing tables
+    |   Relational    |  ----- Behind the scene database construction
+    |   Model         |
+    +-----------------+
+       |
+       | Entities Definition
+       v
+    +-----------------+
+    |  Database/POJOs | -- Developer defines each Class
+    |    Plain        | ----- Define attributes in Table
+    |    Old Java     | ----- Define relationships in Database
+    |    Objects      | 
+    +-----------------+
+
 ---
 
 [Runtime Link](https://nighthawkcoders.github.io/APCSA/data/jokes)
@@ -15,7 +52,9 @@ type: ccc
 ## Java Database
 A POJO is the foundation for making an Entity that is turned into a Database.  The Java Persistent API (JPA) allows Developer to interact with the Database with fairly straightforward code.  An API allows you to share and store data from your community of users.  The pieces are described in this blog.
 
-![Architectural Picture]({{site.baseurl}}/images/pojo_jpa.png)
+<pre>
+  <p>{{ page.spring_api_orm }}</p>
+</pre>
 
 ### POJO and @Entity Definition
 > This code shows power of Spring Annotations and Java, with a little bit of code a Developer is opening up persistent data storage, a database.
