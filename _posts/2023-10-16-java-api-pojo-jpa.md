@@ -44,31 +44,38 @@ spring_api_orm: &spring_api_orm |
 
 ---
 
-[Runtime Link](https://nighthawkcoders.github.io/APCSA/data/jokes)
+## Introduction
+APIs build programmatic interactions between applications, people, and businesses.  They are designed around sharing data and executing pre-defined processes.  Spring Boot and Spring Data JPA reduce time for development; developers implement POJOs and JPA access layers; Spring hanldes the rest.  
 
+An API allows you to request and receive data from the system. A POJO is the foundation for making an Entity that is turned into a Database.  The Java Persistent API (JPA) allows the database to be queried and updated.    
 
-[Back-end Java Spring MVC Files](https://github.com/nighthawkcoders/spring_portfolio/tree/master/src/main/java/com/nighthawk/spring_portfolio/mvc/jokes)
+The subject of this article is Jokes, likes (haha)  and dislike (boohoo).   User clicks haha or boohoo and updates counters.
 
-## Java Database
-A POJO is the foundation for making an Entity that is turned into a Database.  The Java Persistent API (JPA) allows Developer to interact with the Database with fairly straightforward code.  An API allows you to share and store data from your community of users.  The pieces are described in this blog.
+[Runtime](https://nighthawkcoders.github.io/APCSA/data/jokes)
+
+[Back-end Java Spring Files](https://github.com/nighthawkcoders/spring_portfolio/tree/master/src/main/java/com/nighthawk/spring_portfolio/mvc/jokes)
+- Jokes.java - contains POJO which defines Model
+- JokesApiControler.java - contains APIs and Control, which respond to View actions
+- JokesJpaRepository.java - contains CRUD and data acess queries
+
+### Visual Overview
 
 <pre>
   <p>{{ page.spring_api_orm }}</p>
 </pre>
 
-### POJO and @Entity Definition
-> This code shows power of Spring Annotations and Java, with a little bit of code a Developer is opening up persistent data storage, a database.
+### POJO Review
+> This code fragment shows power of Spring and Annotations to define a Model.  Using Spring, a little bit of POJO code, the Developer is enabling persistent data storage of a table in a database. It is left to student to search up each annotation for personal clarification beyond the comments below.
 
 ```java
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Data  // Annotations to simplify writing code (ie constructors, setters)
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor  // Builds zero argument constructor
+@AllArgsConstructor // Builds constructor for all agurments
 @Entity // Annotation to simplify creating an entity, which is a lightweight persistence domain object. Typically, an entity represents a table in a relational database, and each entity instance corresponds to a row in that table.
 public class Jokes {
     @Id
@@ -84,7 +91,7 @@ public class Jokes {
 ```
 
 ### Java Persistence API (JPA)
-> The JPA is created to access the database. The JokesJpaRepository interface extends JpaRepository.  This allows the developer access predefined and additionally define  useful interfaces to access their persistent storage.
+> The JPA code is defined to access the database. The JokesJpaRepository interface extends JpaRepository.  This allows the developer access JPA predefined and developer custom interfaces to perform CRUD operations on persistent storage.  It is left to student to define "Delete" operation in CRUD.
 
 ```java
 import java.util.List;
@@ -93,25 +100,24 @@ import org.springframework.data.jpa.repository.JpaRepository;
 // JPA is an object-relational mapping (ORM) to persistent data, originally relational databases (SQL). Today JPA implementations has been extended for NoSQL.
 public interface JokesJpaRepository extends JpaRepository<Jokes, Long> {
     // JPA has many built in methods, these few have been prototyped for this application
-    void save(String Joke);
+    void save(String Joke);  // used for Create, Update operations in CRUD
 
-    // A
+    // Accessors, Read operations in CRUD
     List<Jokes> findAllByOrderByJokeAsc();  // returns a List of Jokes in Ascending order
     List<Jokes> findByJokeIgnoreCase(String joke);  // look to see if Joke(s) exist
 }
 ```
 
-### List and ArrayList
-> List is a super class to ArrayList.  This illustration shows relationship.  In the JPA code you can see that List of Jokes is common result from JPA.  As a database is a series of rows, accessing a List or and ArrayList is done through similar iteration.  Here is illustration of [List and ArrayList from GeeksForGeeks](https://www.geeksforgeeks.org/difference-between-list-and-arraylist-in-java/)
+### JPA returns List
+> List is a super class to ArrayList.  In the JPA code you can see that List of Jokes is common result from JPA accessor method.  It is left to the student to review [List and ArrayList from GeeksForGeeks](https://www.geeksforgeeks.org/difference-between-list-and-arraylist-in-java/) and understand research difference between interface and implementation.
 
-![List ArrayList]({{site.baseurl}}/images/list.png)
 
-### Controller and APIs
-> The last backend piece of the process of accessing the database is building out the RESTful API services to access the data.  Below is the JokesApiController, this is commented extensively.  This has many AP and PBL elements.
+### API Controller
+> This backend piece of the Spring process is building out the RESTful API services to access the data.  Below is the JokesApiController, this is commented extensively.  It is left for the student to review and update the "Spring API and ORM" illustration and add it to their personal blogging notes from the notes and code below.
 - @Autowired annotation provides full access to JokesJpaRepository, what we made with the code above.  Review repository.<actions>, there are actions for set, get, save and more.
 - @GetMapping and @PutMapping which establishes endpoints for RESTful web services to access the data.
-- API data structuring elements @PathVariable and "return new ResponseEntity" these are keys for obtaining and returning data from the accessor.
-
+- API @PathVariable for obtaining information from the request URL.
+- The respones "return new ResponseEntity" returning JSON and Statis/
 
 ```java
 import org.springframework.beans.factory.annotation.Autowired;
@@ -224,16 +230,32 @@ public class JokesApiController {
 ```
 
 ## Hacks
-> AP required.  Review the lambok annotations (https://projectlombok.org/features/).  
-- Write the POJO without using lambok
+AP required.  Review the lambok annotations (https://projectlombok.org/features/).  
+- Write the POJO and show code generated by lambok.  Comment this code in context of requirements for the AP exam.
 
-> PBL foundational.  Establish a POJO, JPA and APIs in your own project.  You can begin with Jokes.
-- Make new POJO attribute.  FYI, as there is not database upgrade.  I suggest deleting /volumes/sqlite.db to ensure schema is updated.
+PBL foundational.  Establish a POJO, JPA and APIs in your own project.  You can begin with Jokes.
+- Make new POJO attribute.  Alert, I suggest deleting /volumes/sqlite.db each time you change schema.  Schema changes are not ugraded automatically.
 - Make a new API endpoint.
 - [Test your API using Postman](https://www.geeksforgeeks.org/basics-of-api-testing-using-postman/).  You should be able to test with localhost:port.
-- Build frontend in different system.
 
-### Resources
-> Googling will find some references.  
-- Something free, but different than mine. [Youtube](https://www.youtube.com/watch?v=8SGI_XS5OPw).  Here is another, but maybe less [Youtube](https://www.youtube.com/watch?v=MaI0_XdpdP8)
-- All of these cost money.  [5 Best Spring Data JPA Courses for Java developers to Learn in 2022](https://medium.com/javarevisited/5-best-spring-data-jpa-courses-for-java-developers-45e6438be3c9). 
+### Resources, recommended by ChatGPT
+1. [Spring Framework Documentation](https://spring.io/projects/spring-framework)
+  The official Spring Framework documentation is entirely free to access. It provides comprehensive information on various Spring modules, including Spring Boot and Spring Data JPA.
+
+2. [Baeldung Spring Boot Tutorials](https://www.baeldung.com/spring-boot)
+  Baeldung: Baeldung offers a mix of free and paid content. While some articles may require a subscription, many tutorials and guides on Spring Boot and Spring Data JPA are available for free.
+
+3. [Baeldung Spring Boot Tutorials](https://www.baeldung.com/spring-boot)
+  Spring Guides: The Spring Guides are completely free and provide step-by-step tutorials on various aspects of Spring development, including Spring Boot and Spring Data JPA.
+
+4. [Spring Guides](https://spring.io/guides)
+Java Brains YouTube Channel: The Java Brains YouTube channel offers free video tutorials on Java and Spring frameworks, including dedicated playlists for Spring Boot and Spring Data JPA.
+
+5 Java Brains YouTube Channe
+  Spring Data JPA Reference Documentation: The Spring Data JPA reference documentation is freely available online and provides in-depth insights into Spring Data JPA features.
+  - [Java Brains Spring Boot Playlist](https://www.youtube.com/playlist?list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas)
+  - [Java Brains Spring Data JPA Playlist](https://www.youtube.com/playlist?list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas)
+
+[Spring Data JPA Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference)
+  The Spring Data JPA reference documentation is freely available online and provides in-depth insights into Spring Data JPA features.
+
