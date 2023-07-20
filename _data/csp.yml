@@ -55,8 +55,8 @@ web_dev_layers: &web_dev_layers |
     | Logic/Events |
     +--------------+
           |
-          | Functionality, interactivity
-          | Sends HTTP requests/responses
+          | JS Functionality, interactivity
+          | Sends API request/response
           v
     +----------------+
     | AWS EC2 Server |
@@ -64,9 +64,9 @@ web_dev_layers: &web_dev_layers |
     |     Backend    |
     +----------------+
           |
-          | Server-Side Proccessing
-          | Analysis Modules and Engines
-          | Communicate with Services
+          | Python Server-Side Proccessing
+          | Analysis, Computation, and Models
+          | Communicate with Data Services
           v
     +----------------+
     |  AWS Services  |
@@ -82,13 +82,13 @@ Sprint1:
   end: 3
 Sprint2:
   title: Web Development Layers
-  description: DuriDuring Weeks 4-7, students will delve into the layers used in Web Development. They will learn about the key components that make up websites, including the Frontend, Backend, and Data layers. The main focus of this Sprint is to empower students to explore the development and deployment of a simple website. Throughout this period, there will be several lectures that provide ideas and concepts on how to build different components of a website, including sending and receiving data from a backend server.
+  description: During Weeks 4-7, students will delve into the layers used in Web Development. They will learn about the key components that make up websites, including the Frontend, Backend, and Data layers. The main focus of this Sprint is to empower students to explore the development and deployment of a simple website. Throughout this period, there will be several lectures that provide ideas and concepts on how to build different components of a website, including sending and receiving data from a backend server.
   illustration: *web_dev_layers
   start: 4
   end: 7
 Sprint3:
   title:  Web Application, Data, and N@tM
-  description: Student at teams need to build their own Website and Blog their understanding. The Website should include their own interests, but requires use of Python Flask and JavaScript programming.  By the end of the Sprint, students will be ready to start many of the technical coding aspects of Web Development, having established a Deployed Website.  In November, the Trimester work will end with a project and student participation in Electives Department "Night at the Museum" (N@tM). 
+  description: Student teams need to build their own Website and individuals need to blog their learnings. The team Website should include interests, but also requires the use of Python Flask and JavaScript programming.  By the end of the Sprint, students will be ready to start many of the technical coding aspects of Web Development; having established a Deployed Website, Frontend, and Backend.  In November, the Trimester will end by presenting team project at the Electives Department "Night at the Museum" (N@tM). 
   start: 8
   end: 12
 Sprint4:
