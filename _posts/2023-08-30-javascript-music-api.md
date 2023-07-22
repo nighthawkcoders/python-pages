@@ -5,7 +5,7 @@ layout: default
 description: API's are a primary source for obtaining data from the internet.  There is imformation in API's for almost any interest.
 permalink: /frontend/home_table
 categories: [C7.0]
-courses: { csse: {week: 8}, csp: {week: 4, categories: [2.C]}, csa: {week: 0} }
+courses: { csse: {week: 6}, csp: {week: 4, categories: [2.C]}, csa: {week: 0} }
 type: ccc
 ---
 
