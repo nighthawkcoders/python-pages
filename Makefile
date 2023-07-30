@@ -1,10 +1,15 @@
-LOG_FILE = /tmp/jekyll4100.log
+# Configuration, override port with usage: make PORT=4200
+PORT ?= 4100
+LOG_FILE = /tmp/jekyll$(PORT).log
 
-# default call server and starts logging
+# Phony Targets, makefile housekeeping for below definitions
+.PHONY: default server convert clean stop
+
+# Call server, then verify and start logging
 default: server
 	@echo "Terminal logging starting, watching server..."
 	@# tail and awk work together to extract Jekyll regeneration messages
-	@(tail -f $(LOG_FILE) | awk '/Server address: http:\/\/0.0.0.0:4100\/teacher\// { serverReady=1 } serverReady && /^ *Regenerating:/ { regenerate=1 } regenerate { if (/^[[:blank:]]*$$/) { regenerate=0 } else { print } }') 2>/dev/null &
+	@(tail -f $(LOG_FILE) | awk '/Server address: http:\/\/0.0.0.0:$(PORT)\/teacher\// { serverReady=1 } serverReady && /^ *Regenerating:/ { regenerate=1 } regenerate { if (/^[[:blank:]]*$$/) { regenerate=0 } else { print } }') 2>/dev/null &
 	@# start an infinite loop with timeout to check log status
 	@for ((COUNTER = 0; ; COUNTER++)); do \
 		if grep -q "Server address:" $(LOG_FILE); then \
@@ -23,33 +28,33 @@ default: server
 	@sed '$$d' $(LOG_FILE)
 	
 	
-# start the local web server
+# Start the local web server
 server: clean convert
 	@echo "Starting server..."
-	@@nohup bundle exec jekyll serve -H 0.0.0.0 -P 4100 > /tmp/jekyll4100.log 2>&1 & \
+	@@nohup bundle exec jekyll serve -H 0.0.0.0 -P $(PORT) > $(LOG_FILE) 2>&1 & \
 		PID=$$!; \
 		echo "Server PID: $$PID"
-	@@until [ -f /tmp/jekyll4100.log ]; do sleep 1; done
+	@@until [ -f $(LOG_FILE) ]; do sleep 1; done
 
 
-# convert nb notebooks to markdown
+# Convert nb notebooks to markdown
 convert:
 	@echo "Converting IPYNB files..."
 	@python scripts/convert_notebooks.py
 
 
-# clean up project, to avoid issues stop is dependency
+# Clean up project derived files, to avoid run issues stop is dependency
 clean: stop
 	@echo "Cleaning converted IPYNB files..."
 	@@rm -f _posts/*_IPYNB_2_.md
 	@rm -rf _site
 
 
-# stop the server and clean up the port
+# Stop the server and kill processes
 stop:
 	@echo "Stopping server..."
-	@# kills process running on port 4100
-	@@lsof -ti :4100 | xargs kill >/dev/null 2>&1 || true
+	@# kills process running on port $(PORT)
+	@@lsof -ti :$(PORT) | xargs kill >/dev/null 2>&1 || true
 	@echo "Stopping logging process..."
 	@# kills previously running logging processes
 	@@ps aux | awk -v log_file=$(LOG_FILE) '$$0 ~ "tail -f " log_file { print $$2 }' | xargs kill >/dev/null 2>&1 || true
