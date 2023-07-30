@@ -1,24 +1,27 @@
+LOG_FILE = /tmp/jekyll4100.log
+
 # default call server and starts logging
 default: server
-	@echo "Terminal logging starting..."
+	@echo "Terminal logging starting, watching server..."
 	@# tail and awk work together to extract Jekyll regeneration messages
-	@@(tail -f /tmp/jekyll4100.log | awk '/Server address: http:\/\/0.0.0.0:4100\/teacher\// { serverReady=1 } serverReady && /^ *Regenerating:/ { regenerate=1 } regenerate { if (/^[[:blank:]]*$$/) { regenerate=0 } else { print } }') 2>/dev/null &
-	@# start a infinite loop with timeout to check log status
+	@(tail -f $(LOG_FILE) | awk '/Server address: http:\/\/0.0.0.0:4100\/teacher\// { serverReady=1 } serverReady && /^ *Regenerating:/ { regenerate=1 } regenerate { if (/^[[:blank:]]*$$/) { regenerate=0 } else { print } }') 2>/dev/null &
+	@# start an infinite loop with timeout to check log status
 	@for ((COUNTER = 0; ; COUNTER++)); do \
-		if grep -q "Server address:" /tmp/jekyll4100.log; then \
-			echo "Server is running in $$COUNTER seconds"; \
+		if grep -q "Server address:" $(LOG_FILE); then \
+			echo "Server started in $$COUNTER seconds"; \
 			break; \
 		fi; \
 		if [ $$COUNTER -eq 60 ]; then \
 			echo "Server timed out after $$COUNTER seconds."; \
-			echo "Review errors from /tmp/jekyll4100.log."; \
-			cat /tmp/jekyll4100.log; \
+			echo "Review errors from $(LOG_FILE)."; \
+			cat $(LOG_FILE); \
 			exit 1; \
 		fi; \
 		sleep 1; \
 	done
 	@# outputs startup log, removes last line ($$d) as ctl-c message is not applicable for background process
-	@@sed '$$d' /tmp/jekyll4100.log
+	@sed '$$d' $(LOG_FILE)
+	
 	
 # start the local web server
 server: clean convert
@@ -27,7 +30,6 @@ server: clean convert
 		PID=$$!; \
 		echo "Server PID: $$PID"
 	@@until [ -f /tmp/jekyll4100.log ]; do sleep 1; done
-	@echo "Server is running"
 
 
 # convert nb notebooks to markdown
@@ -50,8 +52,6 @@ stop:
 	@@lsof -ti :4100 | xargs kill >/dev/null 2>&1 || true
 	@echo "Stopping logging process..."
 	@# kills previously running logging processes
-	@@ps aux | awk '/tail -f \/tmp\/jekyll4100.log/ { print $$2 }' | xargs kill >/dev/null 2>&1 || true
+	@@ps aux | awk -v log_file=$(LOG_FILE) '$$0 ~ "tail -f " log_file { print $$2 }' | xargs kill >/dev/null 2>&1 || true
 	@# removes log
-	@rm -f /tmp/jekyll4100.log
-
-
+	@rm -f $(LOG_FILE)
