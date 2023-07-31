@@ -12,17 +12,26 @@ notebook_directory = "_notebooks"
 # Specify the destination directory for the converted Markdown files
 destination_directory = "_posts"
 
-def extract_front_matter(notebook):
+def error_cleanup(notebook_file):
+    # Remove the destination file if it exists
+    destination_file = os.path.basename(notebook_file).replace(".ipynb", "_IPYNB_2_.md")
+    destination_path = os.path.join(destination_directory, destination_file)
+    if os.path.exists(destination_path):
+        os.remove(destination_path)
+
+def extract_front_matter(notebook_file, cell):
     front_matter = {}
     
-    source = notebook.get('source', '')
+    source = cell.get('source', '')
     if source.startswith('---'):
         # Extract front matter from source
         try:
             front_matter = yaml.safe_load(source.split('---', 2)[1])
         except yaml.YAMLError as e:
             print(f"Error parsing YAML front matter: {e}")
-    
+            error_cleanup(notebook_file)
+            sys.exit(1)
+
     return front_matter
 
 # Function to convert the notebook to Markdown with front matter
@@ -32,7 +41,7 @@ def convert_notebook_to_markdown_with_front_matter(notebook_file):
         notebook = nbformat.read(file, as_version=nbformat.NO_CONVERT)
         
         # Extract front matter from the first cell
-        front_matter = extract_front_matter(notebook.cells[0])
+        front_matter = extract_front_matter(notebook_file, notebook.cells[0])
         
         # Remove the first cell from the notebook
         notebook.cells.pop(0)
@@ -61,6 +70,7 @@ def convert_single_notebook(notebook_file):
         convert_notebook_to_markdown_with_front_matter(notebook_file)
     except ConversionException as e:
         print(f"Conversion error for {notebook_file}: {str(e)}")
+        error_cleanup(notebook_file)
         sys.exit(1)
 
 def convert_notebooks():
@@ -71,6 +81,7 @@ def convert_notebooks():
             convert_single_notebook(notebook_file)
         except ConversionException as e:
             print(f"Conversion error for {notebook_file}: {str(e)}")
+            error_cleanup(notebook_file)
             sys.exit(1)
 
 # Call the function to perform conversions when the script is run directly
