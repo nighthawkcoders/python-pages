@@ -4,6 +4,7 @@ from nbconvert.utils.exceptions import ConversionException
 import os
 import nbformat
 import yaml
+import sys
 
 # Specify the directory where your Jupyter Notebook files are located
 notebook_directory = "_notebooks"
@@ -25,7 +26,7 @@ def extract_front_matter(notebook):
     return front_matter
 
 # Function to convert the notebook to Markdown with front matter
-def convert_notebook_to_markdown_with_front_matter(notebook_file, destination_directory):
+def convert_notebook_to_markdown_with_front_matter(notebook_file):
     # Load the notebook file
     with open(notebook_file, 'r', encoding='utf-8') as file:
         notebook = nbformat.read(file, as_version=nbformat.NO_CONVERT)
@@ -55,14 +56,26 @@ def convert_notebook_to_markdown_with_front_matter(notebook_file, destination_di
             file.write(markdown_with_front_matter)
 
 # Function to convert the Jupyter Notebook files to Markdown
+def convert_single_notebook(notebook_file):
+    try:
+        # Add set -e here to exit if there's an error
+        os.system("set -e;") 
+        convert_notebook_to_markdown_with_front_matter(notebook_file)
+    except ConversionException as e:
+        print(f"Conversion error for {notebook_file}: {str(e)}")
+        sys.exit(1)
+        
+        
 def convert_notebooks():
     notebook_files = glob.glob(f"{notebook_directory}/*.ipynb")
     
     for notebook_file in notebook_files:
         try:
-            # Convert each notebook file to Markdown with front matter
-            convert_notebook_to_markdown_with_front_matter(notebook_file, destination_directory)
+            convert_notebook_to_markdown_with_front_matter(notebook_file)
         except ConversionException as e:
             print(f"Conversion error for {notebook_file}: {str(e)}")
+            sys.exit(1)
 
-convert_notebooks()
+# Call the function to perform conversions when the script is run directly
+if __name__ == "__main__":
+    convert_notebooks()

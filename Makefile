@@ -2,8 +2,19 @@
 PORT ?= 4100
 LOG_FILE = /tmp/jekyll$(PORT).log
 
+# Exceptions will stop make
+SHELL = /bin/bash
+.SHELLFLAGS = -e -c
+
 # Phony Targets, makefile housekeeping for below definitions
 .PHONY: default server convert clean stop
+
+# List all .ipynb files in the _notebooks directory
+NOTEBOOK_FILES := $(wildcard _notebooks/*.ipynb)
+
+# Specify the target directory for the converted Markdown files
+DESTINATION_DIRECTORY = _posts
+MARKDOWN_FILES := $(patsubst _notebooks/%.ipynb,$(DESTINATION_DIRECTORY)/%_IPYNB_2_.md,$(NOTEBOOK_FILES))
 
 # Call server, then verify and start logging
 default: server
@@ -29,7 +40,7 @@ default: server
 	
 	
 # Start the local web server
-server: clean convert
+server: stop convert
 	@echo "Starting server..."
 	@@nohup bundle exec jekyll serve -H 0.0.0.0 -P $(PORT) > $(LOG_FILE) 2>&1 & \
 		PID=$$!; \
@@ -37,11 +48,13 @@ server: clean convert
 	@@until [ -f $(LOG_FILE) ]; do sleep 1; done
 
 
-# Convert nb notebooks to markdown
-convert:
-	@echo "Converting IPYNB files..."
-	@python scripts/convert_notebooks.py
+# Convert .ipynb files to Markdown with front matter
+convert: $(MARKDOWN_FILES)
 
+# Convert .md file, if .ipynb file is newer
+$(DESTINATION_DIRECTORY)/%_IPYNB_2_.md: _notebooks/%.ipynb
+	@echo "Converting source $< to destination $@"
+	@python -c 'import sys; from scripts.convert_notebooks import convert_single_notebook; convert_single_notebook(sys.argv[1])' "$<"
 
 # Clean up project derived files, to avoid run issues stop is dependency
 clean: stop
