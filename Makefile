@@ -16,10 +16,23 @@ DESTINATION_DIRECTORY = _posts
 MARKDOWN_FILES := $(patsubst _notebooks/%.ipynb,$(DESTINATION_DIRECTORY)/%_IPYNB_2_.md,$(NOTEBOOK_FILES))
 
 # Call server, then verify and start logging
+# ...
+
+# Call server, then verify and start logging
 default: server
 	@echo "Terminal logging starting, watching server..."
 	@# tail and awk work together to extract Jekyll regeneration messages
-	@(tail -f $(LOG_FILE) | awk '/Server address: http:\/\/0.0.0.0:$(PORT)\/teacher\// { serverReady=1 } serverReady && /^ *Regenerating:/ { regenerate=1 } regenerate { if (/^[[:blank:]]*$$/) { regenerate=0 } else { print } }') 2>/dev/null &
+	@# When a _notebook is detected in the log, call make convert in the background
+	@# Note: We use the "if ($$0 ~ /_notebooks\/.*\.ipynb/) { system(\"make convert &\") }" to call make convert
+	@(tail -f $(LOG_FILE) | awk '/Server address: http:\/\/0.0.0.0:$(PORT)\/teacher\// { serverReady=1 } \
+	serverReady && /^ *Regenerating:/ { regenerate=1 } \
+	regenerate { \
+		if (/^[[:blank:]]*$$/) { regenerate=0 } \
+		else { \
+			print; \
+			if ($$0 ~ /_notebooks\/.*\.ipynb/) { system("make convert &") } \
+		} \
+	}') 2>/dev/null &
 	@# start an infinite loop with timeout to check log status
 	@for ((COUNTER = 0; ; COUNTER++)); do \
 		if grep -q "Server address:" $(LOG_FILE); then \
@@ -36,6 +49,7 @@ default: server
 	done
 	@# outputs startup log, removes last line ($$d) as ctl-c message is not applicable for background process
 	@sed '$$d' $(LOG_FILE)
+
 
 
 # Start the local web server
