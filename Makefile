@@ -1,10 +1,9 @@
 # Configuration, override port with usage: make PORT=4200
 PORT ?= 4100
 LOG_FILE = /tmp/jekyll$(PORT).log
-
 # Exceptions will stop make
 SHELL = /bin/bash
-.SHELLFLAGS = -e -c
+.SHELLFLAGS = -e
 
 # Phony Targets, makefile housekeeping for below definitions
 .PHONY: default server convert clean stop
@@ -37,8 +36,8 @@ default: server
 	done
 	@# outputs startup log, removes last line ($$d) as ctl-c message is not applicable for background process
 	@sed '$$d' $(LOG_FILE)
-	
-	
+
+
 # Start the local web server
 server: stop convert
 	@echo "Starting server..."
@@ -50,7 +49,7 @@ server: stop convert
 
 # Convert .ipynb files to Markdown with front matter
 convert: $(MARKDOWN_FILES)
-
+	
 # Convert .md file, if .ipynb file is newer
 $(DESTINATION_DIRECTORY)/%_IPYNB_2_.md: _notebooks/%.ipynb
 	@echo "Converting source $< to destination $@"

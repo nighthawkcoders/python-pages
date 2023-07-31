@@ -58,20 +58,17 @@ def convert_notebook_to_markdown_with_front_matter(notebook_file):
 # Function to convert the Jupyter Notebook files to Markdown
 def convert_single_notebook(notebook_file):
     try:
-        # Add set -e here to exit if there's an error
-        os.system("set -e;") 
         convert_notebook_to_markdown_with_front_matter(notebook_file)
     except ConversionException as e:
         print(f"Conversion error for {notebook_file}: {str(e)}")
         sys.exit(1)
-        
-        
+
 def convert_notebooks():
     notebook_files = glob.glob(f"{notebook_directory}/*.ipynb")
     
     for notebook_file in notebook_files:
         try:
-            convert_notebook_to_markdown_with_front_matter(notebook_file)
+            convert_single_notebook(notebook_file)
         except ConversionException as e:
             print(f"Conversion error for {notebook_file}: {str(e)}")
             sys.exit(1)
