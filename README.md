@@ -84,6 +84,10 @@ source ~/.zshrc
 #
 # update conda
 conda update -n base -y -c defaults conda
+#
+# Install local build tools
+gem install jekyll bundler
+#
 conda install -y -c conda-forge pyyam
 # install jekyll
 gem install jekyll bundler
