@@ -17,8 +17,6 @@ chmod +x /tmp/miniconda.sh
 /tmp/miniconda.sh -f -p $HOME/miniconda
 # Configure conda into shell startup
 export PATH="$HOME/miniconda/bin:$PATH"
-eval "$(conda shell.bash hook)"
-conda shell.bash hook
 conda update -n base -y -c defaults conda
 # 
 echo "=== Activate Conda  ==="
