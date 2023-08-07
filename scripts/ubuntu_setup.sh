@@ -19,9 +19,10 @@ chmod +x /tmp/miniconda.sh
 # update conda
 export PATH="$HOME/miniconda/bin:$PATH"
 conda update -n base -y -c defaults conda
-# conda install -y -c conda-forge pyyam
 echo "=== Activate Conda  ==="
 echo "source ~/.bashrc or relanuch terminal"
 # source ~/.bashrc
+# conda install -y -c conda-forge pyyam
+
 
 
