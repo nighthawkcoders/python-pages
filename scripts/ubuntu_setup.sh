@@ -14,15 +14,17 @@ gem install jekyll bundler
 echo "=== Install Conda ==="
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86.sh -O /tmp/miniconda.sh
 chmod +x /tmp/miniconda.sh
-/tmp/miniconda.sh -b -p $HOME/miniconda
+/tmp/miniconda.sh -f -p $HOME/miniconda
 # Configure conda into shell startup
 export PATH="$HOME/miniconda/bin:$PATH"
+eval "$(conda shell.bash hook)"
+conda shell.bash hook
 conda update -n base -y -c defaults conda
 # 
 echo "=== Activate Conda  ==="
 echo "source ~/.bashrc or relanuch terminal"
-# source ~/.bashrc
-# conda install -y -c conda-forge pyyam
+source ~/.bashrc
+conda install -y -c conda-forge pyyam
 
 
 
