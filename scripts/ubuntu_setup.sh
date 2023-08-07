@@ -15,12 +15,13 @@ echo "=== Install Conda ==="
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86.sh -O /tmp/miniconda.sh
 chmod +x /tmp/miniconda.sh
 /tmp/miniconda.sh -b -p $HOME/miniconda
-# Configure ruby into shell
-# source the .bashrc file or relanuch terminal
+# Configure conda into shell
 # update conda
-~/miniconda/bin/conda update -n base -y -c defaults conda
-~/miniconda/bin/conda install -y -c conda-forge pyyam
+export PATH="$HOME/miniconda/bin:$PATH"
+conda update -n base -y -c defaults conda
+# conda install -y -c conda-forge pyyam
 echo "=== Activate Conda  ==="
-source ~/.bashrc
+echo "source ~/.bashrc or relanuch terminal"
+# source ~/.bashrc
 
 
