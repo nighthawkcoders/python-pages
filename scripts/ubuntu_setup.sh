@@ -1,6 +1,11 @@
 #!/bin/bash
 
-# Ubuntu requirements
+# Ubuntu required tools
+#
+#
+echo "=== Ugrade Packages ==="
+sudo apt update -y
+sudo apt upgrade -y
 #
 echo "=== Install Ruby ==="
 # sudo apt install. installs packages for Ubuntu
@@ -16,9 +21,7 @@ gem install jekyll bundler
 echo "=== Install Conda ==="
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86.sh -O /tmp/miniconda.sh
 chmod +x /tmp/miniconda.sh
-/tmp/miniconda.sh -f -p $HOME/miniconda
-echo "=== Activate Conda  ==="
-echo "source ~/.bashrc or relanuch terminal"
+
 
 
 
