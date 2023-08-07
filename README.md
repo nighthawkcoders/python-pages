@@ -33,10 +33,9 @@ Deployment Cycle.  In the deplopyment cycle, `sync-github-action-review`, it is 
 ### WSL and/or Ubuntu installation requirements
 - The result of these step is Ubuntu tools to run preview server.  These procedures were created using [jekyllrb.com](https://jekyllrb.com/docs/installation/ubuntu/)
 ```bash
-# ruby
-# WSL/Ubuntu commands
+# Ubuntu requirements
 #
-# install Ruby for WSL
+echo "=== Install Ruby ==="
 # sudo apt install. installs packages for Ubuntu
 sudo apt install ruby-full build-essential zlib1g-dev
 # the following "echo" commands adds gems installation directory into the .bashrc file, avoiding root requirements
@@ -44,17 +43,19 @@ echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 #
-# install conda for WSL Ubuntu
+echo "=== Install Jekyl ==="
+gem install jekyll bundler
+#
+echo "=== Install Conda ==="
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86.sh -O /tmp/miniconda.sh
-bash /tmp/miniconda.sh -b -p $HOME/miniconda
+chmod +x /tmp/miniconda.sh
+/tmp/miniconda.sh -b -p $HOME/miniconda
 # Configure ruby into shell
 # source the .bashrc file or relanuch terminal
 source ~/.bashrc
 # update conda
 conda update -n base -y -c defaults conda
 conda install -y -c conda-forge pyyam
-# install jekyll and bundler
-gem install jekyll bundler
 ```
 
 ### MacOs installation requirements 
