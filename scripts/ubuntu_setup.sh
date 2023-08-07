@@ -15,10 +15,10 @@ echo "=== Install Conda ==="
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86.sh -O /tmp/miniconda.sh
 chmod +x /tmp/miniconda.sh
 /tmp/miniconda.sh -b -p $HOME/miniconda
-# Configure conda into shell
-# update conda
+# Configure conda into shell startup
 export PATH="$HOME/miniconda/bin:$PATH"
 conda update -n base -y -c defaults conda
+# 
 echo "=== Activate Conda  ==="
 echo "source ~/.bashrc or relanuch terminal"
 # source ~/.bashrc
