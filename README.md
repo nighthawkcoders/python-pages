@@ -48,8 +48,6 @@ echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86.sh -O /tmp/miniconda.sh
 bash /tmp/miniconda.sh -b -p $HOME/miniconda
 # Configure ruby into shell
-conda init bash
-#
 # source the .bashrc file or relanuch terminal
 source ~/.bashrc
 # update conda
@@ -78,9 +76,6 @@ echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.zshrc
 # install conda for MacOS
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O /tmp/miniconda.sh
 bash /tmp/miniconda.sh -b -p $HOME/miniconda
-# Configure ruby into shell
-conda init zsh
-
 #
 # source the .zshrc file or relanuch terminal
 source ~/.zshrc
