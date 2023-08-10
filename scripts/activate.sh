@@ -9,6 +9,10 @@ sudo apt installl ruby-full build-essential
 
 #### Puts (base) in prompt
 ```bash
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+
 echo "=== Make Conda environment (base) ==="
 conda activate
 ```
