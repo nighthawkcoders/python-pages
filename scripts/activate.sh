@@ -9,12 +9,12 @@
 
 # Start a terminal for commands
 $ git clone https://github.com/nighthawkcoders/teacher.git
-$ ./teacher/activate.sh
+$ ./teacher/scripts/activate.sh
 
-# Run the cat command, leave this terminal open ...
-#    the cat command shows remaining instructions  ...
+# Run the head command, leave this terminal open ...
+#    the head command shows remaining instructions  ...
 #    find this spot and continue on
-$ head -30 ./teacher/activate.sh
+$ head -30 ./teacher/scripts/activate.sh
 
 # Start a new terminal ...
 #    the "new" terminal is the command terminal ...
@@ -28,7 +28,6 @@ $ bundle exec jekyll serve
 # The build execution is complete ...
 #     Ctl-Click on "link" in terminal ...
 #     observe web site in the opened browser
-
 comment
 
 #### Github Pages Local Build
@@ -40,5 +39,5 @@ echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 echo "=== Gem install starting, thinking... ==="
 gem install jekyll bundler
-head -30 ./teacher/activate.sh
+head -30 ./teacher/scripts/activate.sh
 echo "=== !!!Start a new Terminal!!! ==="
