@@ -18,11 +18,3 @@ echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 echo "=== Install Jekyl ==="
 gem install jekyll bundler
 #
-echo "=== Install Conda ==="
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86.sh -O /tmp/miniconda.sh
-chmod +x /tmp/miniconda.sh
-
-
-
-
-
