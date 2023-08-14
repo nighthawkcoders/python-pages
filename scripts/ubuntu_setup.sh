@@ -10,11 +10,9 @@ sudo apt upgrade -y
 echo "=== Install Ruby ==="
 # sudo apt install. installs packages for Ubuntu
 sudo apt install ruby-full build-essential zlib1g-dev -y
-# the following "echo" commands adds gems installation directory into the .bashrc file, avoiding root requirements
-echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 #
-echo "=== Install Jekyl ==="
-gem install jekyll bundler
-#
+echo "=== Install Python ==="
+sudo apt-get install -y python3 python3-pip python-is-python3
+#    
+echo "=== Install Jupyter ==="
+sudo apt-get install -y jupyter-notebook
