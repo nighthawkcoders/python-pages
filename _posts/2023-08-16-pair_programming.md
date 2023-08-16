@@ -25,7 +25,7 @@ type: collab
 
 - Individual GitHub Pages considerations for Big Ideas 1 - 5
     - <mark>Each week we will be studying Big Ideas/Key Objectivies</mark>.  There will be Units and blogs in the schedule will describe key objectives. In AP Classes this will include Collage Board Test Prep and PBL Tech Talks
-    - <mark>GitHub (GH) Pages should be used as a project notebook.</mark> In GH Pages, you can capture Project Based Learning (PBL).  Also, in Jupyter Notebooks you can capture JavaScript, Python, Java key learnings each week using code cells!  
+    - <mark>GitHub (GH) Pages should be used as a project/lab notebook.</mark> In GH Pages, you can capture Project Based Learning (PBL).  Also, in Jupyter Notebooks you can capture JavaScript, Python, Java key learnings each week using code cells!  
     - BTW, using GH Pages will let you <mark>Code and Blog at the same time</mark>.  Jupyter Notebooks using Python and Markdown will enable running code in code cells and notes in markdown cells. The Teachers like running code!  Jupyter Notebooks, using Python kernel can do JavaScript, Python, Bash and other languages.
 
 
