@@ -9,7 +9,7 @@ type: collab
 ---
 
 # "Real World" Projects
-<mark>Don't do it alone.</mark> You and your pair, will collaboratively together and each of you will Build, deploy and <mark>host Web Site</mark>.  This Web project contains Technicals learned throughout the Trimester.  This will be done in increments.  Each week an assignment will be given and the next week it will be under <mark>Live Review</mark>.
+<mark>Don't do it alone.</mark> You and your pair, will collaboratively together and each of you will Build, deploy and <mark>host a Web Site</mark>.  This Web project contains Technicals learned throughout the Trimester.  This will be done in increments.  Each week an assignment will be given and the next week it will be under <mark>Live Review</mark>.
 
 - Feature Considerations for Project
     - Final Project and Blog Requirements
