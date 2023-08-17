@@ -1,5 +1,4 @@
 ---
-toc: true
 layout: post
 title: Pair Programming
 description: Pair Programming allows you to have secondary thinking as you work, not just a reflection after you are done, but real time support.
@@ -8,7 +7,7 @@ categories: [C1.4]
 type: collab
 ---
 
-# "Real World" Projects
+## "Real World" Projects
 <mark>Don't do it alone.</mark> You and your pair, will collaboratively together and each of you will Build, deploy and <mark>host a Web Site</mark>.  This Web project contains Technicals learned throughout the Trimester.  This will be done in increments.  Each week an assignment will be given and the next week it will be under <mark>Live Review</mark>.
 
 - Feature Considerations for Project
@@ -29,7 +28,7 @@ type: collab
     - BTW, using GH Pages will let you <mark>Code and Blog at the same time</mark>.  Jupyter Notebooks using Python and Markdown will enable running code in code cells and notes in markdown cells. The Teachers like running code!  Jupyter Notebooks, using Python kernel can do JavaScript, Python, Bash and other languages.
 
 
-### Hacks
+## Hacks
 > Establish PBL and Comp Sci attitude; often called an <mark>Agile Mindset or Growth Mindset</mark>.
 - Watch a video [How I Would Learn To Code](https://www.youtube.com/watch?v=k9WqpQp8VSU)
 - Attitude.  An Agile/Growth mindset is not knowing the answer, making lots of mistakes and performing iteration.  <mark>A successful grade is dependent on making mistakes, research, asking questions, and continual iteration</mark>.
