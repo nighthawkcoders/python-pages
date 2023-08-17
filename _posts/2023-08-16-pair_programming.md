@@ -1,4 +1,5 @@
 ---
+toc: true
 layout: post
 title: Pair Programming
 description: Pair Programming allows you to have secondary thinking as you work, not just a reflection after you are done, but real time support.
