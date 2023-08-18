@@ -14,7 +14,7 @@ $ ./teacher/scripts/activate.sh
 # Run the head command, leave this terminal open ...
 #    the head command shows remaining instructions  ...
 #    find this spot and continue on
-$ head -30 ./teacher/scripts/activate.sh
+$ head -30 ./vscode/teacher/scripts/activate.sh
 
 # Start a new terminal ...
 #    the "new" terminal is the command terminal ...
@@ -39,5 +39,5 @@ echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 echo "=== Gem install starting, thinking... ==="
 gem install jekyll bundler
-head -30 ./teacher/scripts/activate.sh
+head -30 ./vscode/teacher/scripts/activate.sh
 echo "=== !!!Start a new Terminal!!! ==="
