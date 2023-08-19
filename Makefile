@@ -2,9 +2,9 @@
 PORT ?= 4100
 REPO_NAME ?= teacher
 LOG_FILE = /tmp/jekyll$(PORT).log
-# Exceptions will stop make
+
 SHELL = /bin/bash
-.SHELLFLAGS = -e
+.SHELLFLAGS = -e # Exceptions will stop make, works on MacOS
 
 # Phony Targets, makefile housekeeping for below definitions
 .PHONY: default server convert clean stop
