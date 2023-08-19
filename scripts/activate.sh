@@ -22,7 +22,7 @@ $ head -30 ~/vscode/teacher/scripts/activate.sh
 #    the "new" terminal is the command terminal ...
 #    the "original" terminal shows commands ...
 #    type commands in "new" terminal
-$ cd teacher
+$ cd ~/vscode/teacher
 $ bundle install
 $ bundle exec jekyll serve
 
