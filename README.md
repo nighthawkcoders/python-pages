@@ -33,72 +33,41 @@ Deployment Cycle.  In the deplopyment cycle, `sync-github-action-review`, it is 
 ### WSL and/or Ubuntu installation requirements
 - The result of these step is Ubuntu tools to run preview server.  These procedures were created using [jekyllrb.com](https://jekyllrb.com/docs/installation/ubuntu/)
 ```bash
-# Ubuntu requirements
+# 
+# WSL/Ubuntu setup
 #
-echo "=== Install Ruby ==="
-# sudo apt install. installs packages for Ubuntu
-sudo apt install ruby-full build-essential zlib1g-dev -y
-# the following "echo" commands adds gems installation directory into the .bashrc file, avoiding root requirements
-echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-#
-echo "=== Install Jekyl ==="
-gem install jekyll bundler
-#
-echo "=== Install Conda ==="
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86.sh -O /tmp/miniconda.sh
-chmod +x /tmp/miniconda.sh
-/tmp/miniconda.sh -b -p $HOME/miniconda
-# Configure ruby into shell
-# source the .bashrc file or relanuch terminal
-# update conda
-~/miniconda/bin/conda update -n base -y -c defaults conda
-~/miniconda/bin/conda install -y -c conda-forge pyyam
-echo "=== Activate Conda  ==="
-source ~/.bashrc
+mkdir mkdir vscode
+git clone https://github.com/nighthawkcoders/teacher.git
+# run script, path vscode/teacher are baked in script
+~/vscode/teacher/scripts/activate_ubuntu.sh
+#=== !!!Start a new Terminal!!! ===
+#=== Continue to next section ===
 ```
 
 ### MacOs installation requirements 
-- Ihe result of these step are MacOS tools to run preview server.  These procedures were created using [jekyllrb.com](https://jekyllrb.com/docs/installation/macos/)
+- Ihe result of these step are MacOS tools to run preview server.  These procedures were created using [jekyllrb.com](https://jekyllrb.com/docs/installation/macos/). 
+
 ```bash
-# ruby
-# MacOS commands
+# 
+# MacOS setup
 #
-# Install Ruby for MacOS
-brew install chruby ruby-install xz
-ruby-install ruby 3.1.3
-# Configure ruby into shell using .zshrc
-echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
-echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
-echo '# Install Ruby Gems to ~/gems' >> ~/.zshrc
-echo 'export GEM_HOME="$HOME/gems"' >> ~/.zshrc
-echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.zshrc
-#
-# install conda for MacOS
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O /tmp/miniconda.sh
-bash /tmp/miniconda.sh -b -p $HOME/miniconda
-#
-# source the .zshrc file or relanuch terminal
-source ~/.zshrc
-#
-# update conda
-conda update -n base -y -c defaults conda
-#
-# Install local build tools
-gem install jekyll bundler
-#
-conda install -y -c conda-forge pyyam
-# install jekyll
-gem install jekyll bundler
+mkdir mkdir vscode
+git clone https://github.com/nighthawkcoders/teacher.git
+# run script, path vscode/teacher are baked in script
+~/vscode/teacher/scripts/activate_macos.sh
+#=== !!!Start a new Terminal!!! ===
+#=== Continue to next section ===
 ```
 
-### Preview
-- The result of these step is server running on: http://0.0.0.0:4100/teacher/.  Regeneration messages will run in terminal on any save.  Press the Enter or Return key in the terminal at any time to enter commands.
+
+### Run Preview Server
+- The result of these step is server running on: http://0.0.0.0:4100/teacher/.  Regeneration messages will run in terminal on any save and update site upon refresh.  Terminal is active, press the Enter or Return key in the terminal at any time to see prompt to enter commands.
 
 - Complete installation
 ```bash
+cd ~/vscode/teacher
 bundle install
+make
 ```
 - Run Server.  This requires running terminal commands `make`, `make stop`, `make clean`, or `make convert` to manage the running server.  Logging of details will appear in terminal.   A `Makefile` has been created in project to support commands and start processes.
 
