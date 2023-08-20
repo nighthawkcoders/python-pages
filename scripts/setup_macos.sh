@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Function to check if a line exists in run commands
+line_exists_in_rc() {
+  grep -Fxq "$1" ~/.zshrc
+}
+
+# Function to add line to run commands
+add_to_rc() {
+  if ! line_exists_in_rc "$1"; then
+    echo "$1" >> ~/.zshrc
+  fi
+}
+
 # MacOS required tools
 #
 # MacOS commands
@@ -13,18 +25,17 @@ yes | brew install xz # decompression utility
 # Install rbenv, Ruby 3.1.4, and configure it
 echo "=== Install Ruby ==="
 yes | brew install rbenv
-yes | rbenv install 3.1.4
+
+# Test if Ruby 3.1.4 exists
+if ! rbenv versions | grep -q 3.1.4; then   
+    yes | rbenv install 3.1.4
+fi
 rbenv global 3.1.4
 
 # Configure rbenv to initialize in the shell
-# echo 'if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi' >> ~/.zshrc
-cat << 'EOF' >> ~/.zshrc
-# Init rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-EOF
+add_to_rc "# rbenv initialize"
+add_to_rc 'if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi'
 #
-# Start a new terminal, test if Ruby 3.1.4 is set
-rbenv versions 
 
 # Install Python and Pip using Homebrew
 echo "=== Install Python ==="
@@ -34,34 +45,20 @@ yes | brew install python
 echo "=== Install Jupyter Notebook ==="
 yes | brew install jupyter
 
-# Show the active Ruby version, MacOS is 3.1.4
-ruby -v
-
-# Show active Python version, it needs to be 3.9 or better
-python --version
 # Setup Python libraries for Notebook conversion
 pip install nbconvert  # library for notebook conversion
 pip install nbformat  # notebook file utility
 pip install pyyaml  # notebook frontmatter
 
-# Show Jupyter packages, nbconvert needs to be in the list
-jupyter --version
-# Show Kernels, python3 needs to be in list
-jupyter kernelspec list
-
 #### Github Pages Local Build
 echo "=== GitHub pages build tools  ==="
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
-#echo '# Install Ruby Gems to ~/gems' >> ~/.zshrc
-#echo 'export GEM_HOME="$HOME/gems"' >> ~/.zshrc
-#echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.zshrc
-cat << 'EOF' >> ~/.zshrc
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-EOF
+add_to_rc "# Ruby Gem Path"
+add_to_rc 'export GEM_HOME="$HOME/gems"'
+add_to_rc 'export PATH="$HOME/gems/bin:$PATH"'
 
 echo "=== Gem install starting, thinking... ==="
 gem install jekyll bundler
+
 echo "=== !!!Start a new Terminal!!! ==="
