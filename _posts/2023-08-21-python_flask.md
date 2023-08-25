@@ -5,7 +5,7 @@ layout: post
 title: Flask/Python Web Application
 description: Setting up a Flask/Python project.  Flask is a Web Application framework written in Python.
 type: plans
-courses: { csse: {week: 1}, csp: {week: 1, categories: [4.A]}, csa: {week: 0} }
+courses: { csp: {week: 12} }
 categories: [C1.4]
 ---
 
@@ -19,7 +19,7 @@ categories: [C1.4]
 
 ### Setup Flask/Python Project
 > Start Flask/Python GitHub repo from a Template.  Setup VSCode project to run python.  Make a change and push to GitHub.
-- Generate your own copy of repository GitHub: [https://github.com/raunak2007/vsc-instant-dev-env-flask/generate](https://github.com/raunak2007/vsc-instant-dev-env-flask/generate)
+- Generate your own copy of repository using the Template: [https://github.com/nighthawkcoders/flask_portfolio](https://github.com/nighthawkcoders/flask_portfolio)
 - "Copy" https address of newly Generated repository, use screen that looks like this:
 ![](https://nighthawkcoders.github.io/APCSP/images/clone_http_address.png)
 - Open terminal and goto your vscode directory: `cd ~/vscode`
@@ -29,7 +29,7 @@ categories: [C1.4]
 ![](https://nighthawkcoders.github.io/APCSP/images/python_interpreter.png)
 - Select Python that is in Conda environment
 ![](https://nighthawkcoders.github.io/APCSP/images/python_conda.png)
-- In VSCode terminal install project dependencies: `pip3 install -r requirements.txt`
+- In VSCode terminal install project dependencies: `pip install -r requirements.txt`
 - Select main.py from VSCode navigator and press ▶️ in upper right corner. An alternate method is type `python3 main.py` in terminal.  Observe terminal output, this sample illustrates a good outcome.
 ![](https://nighthawkcoders.github.io/APCSP/images/python_terminal_output.png)
 - In terminal output you can shift-click on http://127.0.0.1:5000/, or goto Browser and type: `127.0.0.1:5000`
