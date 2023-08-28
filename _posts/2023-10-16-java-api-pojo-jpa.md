@@ -3,7 +3,7 @@ layout: default
 title: API, POJO, JPA
 description: Define a POJO, essentially an class with @Entity properties that enables it to be used with Spring Boot in the process of making a database.  Continue by creating API and JPA to enable frontend to request, backend to write to database and respond.
 categories: [1.A, 3.A, 3.B, C4.5, C4.7]
-courses: { csa: {week: 13} }
+courses: { csa: {week: 6} }
 type: ccc
 spring_api_orm: &spring_api_orm |
   Spring API and ORM
