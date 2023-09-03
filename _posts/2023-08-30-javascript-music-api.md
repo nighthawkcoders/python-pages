@@ -1,7 +1,7 @@
 ---
-title: JS Itunes API
 comments: false
 layout: default
+title: JS Itunes API
 description: API's are a primary source for obtaining data from the internet.  There is imformation in API's for almost any interest.
 permalink: /frontend/home_table
 categories: [C7.0]
