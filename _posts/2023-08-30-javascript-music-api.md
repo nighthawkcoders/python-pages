@@ -1,7 +1,7 @@
 ---
-title: JS Itunes API
-comments: true
+comments: false
 layout: default
+title: JS Itunes API
 description: API's are a primary source for obtaining data from the internet.  There is imformation in API's for almost any interest.
 permalink: /frontend/home_table
 categories: [C7.0]
@@ -126,3 +126,14 @@ type: ccc
       });
   }
 </script>
+
+## Hacks
+The endpoint itunes.apple.com allows requests and responses on their `data`.   We provide the Input and Output interaction with the itunes data;  however, we do not create or manage the data.  There is a backend process that creates and stores data.  
+
+In this type of Website relationship we could provide..
+- A better starting screen.  Providing sample queries on screen.
+-  Provide a local storage to show recent or liked queries by the user.
+
+But, we would need backend help to..
+- Show most popular queries.
+- Add or modify posts.
