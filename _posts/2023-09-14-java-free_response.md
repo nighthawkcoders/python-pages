@@ -8,7 +8,7 @@ type: collab
 ---
 
 ## Mini-Labs
-The goal of FRQ mini-labs is to help you explore, learn to code, and establish the abililty to communicate and collaborate with you team members.
+The goal of FRQ mini-labs is to help you explore, learn to code, and establish the abililty to communicate and collaborate with you team members.  Additionally, you will showcase and record sharing work with another table.  Finally, you will edit and share highlights through video to teacher.
 
 ### Continuous Communication is Key
 If there is one important skill you need to quickly pick up at the start of your Project Journey, it is to plan, communicate, code, communicate, commit, communicate, and share—communicate! Let me reiterate it until it sinks into your brain: <mark>communicate your work as often as needed!</mark> The tech industry moves at a fast pace, so if you want to ensure that all your hard work doesn't go to waste, communication is essential.
@@ -32,12 +32,11 @@ So, how can you achieve that? Here are a few steps:
     In school, it's common to work in isolation for extended periods and share only when we believe we are finished. However, sharing also includes committing code frequently. In the tech industry, there is no time for delayed sharing or late commits. Therefore, increase your sharing pace, do it frequently, and commit your work often!
 
 ### FRQ Hacks
-> During the year we need to learn the four types of FRQs.
-- FRQ No. 1: Methods and Control Structures
-    - Pick a question of type 01 from one of the years posted on the former EXAM page.  Solve the problem, including missing pieces in a Jupyter Notebook.  
-    - Make this a quality blog.  My suggestion each member of team do a different FRQs, to make reviews and grading more valuable.
-    - Browse through multiple questions, find a question that may be have future PBL interest.
-- Repeat for other FRQ Types
+> During the year we need to learn the four types of FRQs.      
+- Pick a question of type 01 from one of the years posted on the former EXAM page.  Solve the problem, including missing pieces in a Jupyter Notebook.  
+- Make this a quality blog.  My suggestion each member of team do a different type of FRQ, to make reviews and grading more valuable.
+- Browse through multiple questions, find questions that mayhave future PBL interest for you or team.
+    - FRQ No. 1: Methods and Control Structures
     - FRQ No. 2: Classes
     - FRQ No. 3: Array/ArrayList
     - FRQ No. 4: 2D Array 
@@ -50,8 +49,9 @@ horizontally
 - Display content backwards
 
 ## Live Grading Presentation.  
-> On Live grading reviews each team will present to another Tables/Teams while presenting to the Teacher.  Each team will have 10 minutes to go over their FRQs.
+> On Live grading reviews each team will present to another Table/Team while the Teacher observes.  Each team will have 10 minutes to go over their FRQs; or a little over 2 minutes per FRQ.
 - Create a Team Review and Review Ticket for all 4 FRQs with each Team Member participating in the discussion.
+- Record presentations and make a highlight clip 30 seconds to 1 minute on each of the FRQs.  There will be a live review to go over final review ticket and clips.
     
 > Presentation.  Introduce 'FRQ lesson' and introduce how you plan to present the Material(s).  
 - Have parts that each person will go over.
@@ -60,7 +60,7 @@ horizontally
 - It would be interesting if you adapt FRQs, so that they work together.  This would show your ability to plan and produce something useful.
 
 > Live Review requirements
-- If code is not give by College Board you must complete it, you FRQs must run.
+- If code is not given by College Board you must complete it, your FRQs must run.
 - Jupyter Notebooks contain comments and markdown cells that describe work, in this case it should be easy to understand FRQ, purpose, and funciton.
 - Show grades and blog(s)/comments  used during reviews.
 - Java output of cells in Jupyter Notebook is required when posting.
