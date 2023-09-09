@@ -20,5 +20,5 @@ Event #2. The following week, student will perform live review with teacher for 
 Teacher grade. 
 - 1 point for personal / team FRQ reviews
 - 1 point for collaboration evidence with crossover team
-- 1 point for FRQ technical work; code quality and code runtime.
-- 1 point for final review ticket and video summary
+- 1 point for individual/team FRQ technical work; code quality and code runtime.
+- 1 point for final review ticket with video summary

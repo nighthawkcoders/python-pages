@@ -8,10 +8,10 @@ type: collab
 ---
 
 ## Mini-Labs
-The goal of FRQ mini-labs is to help you explore, learn to code, and establish the abililty to communicate and collaborate with you team members.  Additionally, you will showcase and record sharing work with another table.  Finally, you will edit and share highlights through video to teacher.
+The mini labs done by each person are valuable to other members of team; they are all part of testing.  The goal of FRQ mini-labs is to help you explore, learn to code, and establish the abililty to communicate and collaborate with you team members.  Additionally, you will showcase and record; specifically sharing work with another table.  Finally, you will edit and share highlights of recording through video editing.
 
 ### Continuous Communication is Key
-If there is one important skill you need to quickly pick up at the start of your Project Journey, it is to plan, communicate, code, communicate, commit, communicate, and share—communicate! Let me reiterate it until it sinks into your brain: <mark>communicate your work as often as needed!</mark> The tech industry moves at a fast pace, so if you want to ensure that all your hard work doesn't go to waste, communication is essential.
+If there is one important skill you need to quickly pick up at the start of your Project Journey, it is to plan, communicate, code, communicate, commit, communicate, and share! Let me reiterate it until it sinks into your brain: <mark>communicate your work as often as needed!</mark> The tech industry moves at a fast pace, so if you want to ensure that all your hard work doesn't go to waste, communication is essential.
 
 So, how can you achieve that? Here are a few steps:
 1. Regularly update your team members on your progress, even if you're not finished yet. One effective way to do this is by sharing small nuggets of the most interesting pieces or insights about your work with the relevant people, such as your pair programmer, team, cross over team, and teacher. However, ensure that you organize or prepare beforehand. 
