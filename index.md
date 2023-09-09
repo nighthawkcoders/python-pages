@@ -26,7 +26,7 @@ title: Course Outlines
 - Prerequisites: 
     - 10th grade: Computer Science and Software Engineering (CSSE) 
     - 11th-12th grade: GPA above 3.5 and expectation of experience with JavaScript or other programming languages
-- Meets UC/CSU G requirements, also an alternate for D requirement
+- Meets UC/CSU G requirements, also an alternate for 3rd year D requirement
 
 > Data Structures 1 serves as the third trimester for this course. It is the capstone for non-computer science majors/minors and prepares other students to complete the PUSD computer science pathway. Data Structures 1 focuses on creating computer programs independently and includes AP review and AP project time. The course utilizes JavaScript and Python languages to instruct on the imperative and object-oriented programming paradigms. Topics covered include graphical user interfaces, input and output, lists, dictionaries, databases, searching, sorting, and algorithm analysis.
 - Prerequisites: AP Computer Science Principles 1,2
@@ -37,7 +37,7 @@ title: Course Outlines
 ## Computer Science "A" 1,2 and Data Structures 2; Grades 11-12
 > AP Computer Science A is an in-depth course that focuses on programming, algorithms, and data structures. The AP Computer Science 'A' curriculum is integrated into this course, which covers the Java programming language and topics such as fundamentals of programming, using objects, writing classes, arrays, array lists, 2D arrays, inheritance, and recursion. Students will gain understanding through analysis, coding, and individual and team projects. The course will establish fluency in Java, utilize JavaScript, and work with Linux.
 - Prerequisites: AP Computer Science Principles 1,2 and Data Structures 1; or teacher recommendation with an expectation of understanding JavaScript, Linux, Data Structures and working in team projects.
-- Meets UC/CSU C or G requirements, also an alternate for C requirement
+- Meets UC/CSU G requirements, also an alternate for 4th year C requirement
 
 > Data Structures 2 serves as the third trimester for the Computer Science "A" course and is the capstone for the Del Norte Computer Science Pathway. It is designed as a companion to AP Computer Science 'A'. This course focuses on basic data structures, algorithms, and includes AP preparation for College Board multiple-choice questions (MCQs) and free-response questions (FRQs). The course utilizes the JavaScript and Java languages to instruct on object-oriented programming paradigm programming and design. Topics covered include searching, sorting, hashing, algorithm analysis, collections, lists, stacks, queues, trees, sets, dictionaries, and graphs. The course concludes with team-oriented project-based learning and a final project.
 - Prerequisites: AP Computer Science ‘A’ 1,2
