@@ -2,7 +2,7 @@
 layout: post
 title:  Student Teaching Tri1
 description: Introduction and Hacks for Java Units.
-courses: { csa: {week: 6}}
+courses: { csa: {week: 4}}
 categories: []
 type: collab
 ---

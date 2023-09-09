@@ -2,7 +2,7 @@
 layout: post
 title:  Passion Project Tri1
 description: The key development task for remainder of Tri1 is a Java Spring Passion Project.
-courses: { csa: {week: 7}}
+courses: { csa: {week: 6}}
 categories: []
 type: collab
 ---
