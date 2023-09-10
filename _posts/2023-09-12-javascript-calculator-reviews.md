@@ -17,6 +17,8 @@ In this task, you will work with the two provided calculators and adapt them to 
 
 - Make sure you use skills described in JS Output w/Objects to help in debugging (ie console.log).
 
+- Make sure you use skills for writing to DOM describe in JS Ouput w/Objects.
+
 - Classroom time will be used to support students with questions.
 
 - If you are feeling advanced...
