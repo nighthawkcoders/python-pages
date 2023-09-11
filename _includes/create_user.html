@@ -43,13 +43,15 @@
 		users = await response.json();
 		const table = document.getElementById("userTable");
 
-		users.forEach((user) => {
+		users.forEach((user, idx) => {
 			const row = table.insertRow();
 			row.setAttribute("data-id", user.id);
 			["name", "uid", "active_classes", "archived_classes", "server_needed"].forEach((field) => {
 				const cell = row.insertCell();
-				const setTo = user[field] === "none" ? "" : user[field];
-				cell.innerText = setTo;
+				if (user[field] === "none") {
+					users[idx][field] = "";
+				}
+				cell.innerText = users[idx][field];
 			});
 
 			const editCell = row.insertCell();
