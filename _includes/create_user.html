@@ -111,7 +111,8 @@
 					data.server_needed,
 				].forEach((value) => {
 					const cell = row.insertCell();
-					cell.innerText = value;
+					const setTo = value === "none" ? "" : value;
+					cell.innerText = setTo;
 				});
 
 				const editCell = row.insertCell();
