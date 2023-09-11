@@ -48,7 +48,8 @@
 			row.setAttribute("data-id", user.id);
 			["name", "uid", "active_classes", "archived_classes", "server_needed"].forEach((field) => {
 				const cell = row.insertCell();
-				cell.innerText = user[field];
+				const setTo = user[field] === "none" ? "" : user[field];
+				cell.innerText = setTo;
 			});
 
 			const editCell = row.insertCell();
@@ -111,8 +112,7 @@
 					data.server_needed,
 				].forEach((value) => {
 					const cell = row.insertCell();
-					const setTo = value === "none" ? "" : value;
-					cell.innerText = setTo;
+					cell.innerText = value;
 				});
 
 				const editCell = row.insertCell();
