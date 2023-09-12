@@ -33,12 +33,12 @@ type: collab
 
 
 ### Roles
-To ensure transparency during the sprint the Team should meet daily at the daily scrum ( sometimes called a standup). As adaptation for classroom, Team should have a <mark>standup meeting</mark> for weekly plans, should have assignments for tasks, assignments for integration and deployment.
+To ensure transparency during the sprint the Team should meet daily at the daily scrum (sometimes called a standup). As adaptation for classroom, Team should have a <mark>standup meeting</mark> for weekly plans, should have assignments for tasks, assignments for integration and deployment.
 - <mark>Scrum Master</mark>: The scrum master helps to facilitate the sprint by ensuring that an agile framework is followed. He/she is committed to tracking issues and maintaining scrum boards, but should also remain flexible and open to opportunities for the team to improve their workflow.
-- <mark>DevOps</mark>: DevOps is the combination of cultural philosophies, practices, and tools that increases an team’s ability to deliver applications and services at high velocity: version control, integration, managing dependencies, POM file management, AWS deployment are some of the key functions that impact velocity.
+- <mark>DevOps</mark>: DevOps is the combination of cultural philosophies, practices, and tools that increases an team’s ability to deliver applications and services at high velocity: version control, integration, dependency file management (POM file, requirements.txt), AWS and GitHub deployment are some of the key functions that improve velocity.
 - Development Team: The development team can be comprised of all kinds of people including designers, writers, presenters, developers, etc.  Two key roles in Web Development are ...
     - <mark>Frontend Developer</mark>: A front-end developer builds the front-end portion of websites and web applications—that is, the part that users actually see and interact with.
-    - <mark>Backend Developer</mark>: Back-end developers a build and maintain the mechanisms that process data and perform actions like data storage, security, and other server-side functions that you cannot see.
+    - <mark>Backend Developer</mark>: Back-end developers build and maintain the mechanisms that process data and perform actions like data storage, security, and other server-side functions that are behind the scenes.
 
 ### Workload
 When planning there is an expectation of time.  
@@ -48,29 +48,31 @@ When planning there is an expectation of time.
 - Key to success.  Make great use of time in class.  Pair share programming typically provides three time dividend over individual programming when you are learning something new.
 
 ### [Issues](https://github.com/features/issues)
-Sprint cadences have ideas/issues that are broken into short term work units called tasks.  
+Sprint cadences have ideas/issues that are broken into short term work units called tasks.  Teacher establishes Sprint time in class schedule.
 
 ### [Scrum Board / GitHub Project / Kanban Style](https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects)
 The Scrum Board contains issues that are assigned to individuals,  each of these <mark>issues will have tangible</mark> deliverable links (code/video/...).  Scrum Team will use Scrum Board to understand everyone's ideas and efforts.  This includes individual tasks.  Use GitHub Projects add Issues to the board.  Issues are placed in columns on a Scrum Board (<mark>Kanban</mark>) to represent progress.  The below columns have been successful in our academic environment.
 1. To do/backlog
 2. In progress
-3. Complete
+3. Code Complete
 4. Deployed
-5. Done
+5. Verified
 
 ### Sprint
-Sprint is a period of time that Team uses to plan work and execute work.  This includes planning, research, development, deployment, and test.  Typically, <mark>sprints will be 2 weeks</mark> or longer in the classroom.  Anytime a sprint lasts longer than a week, there will be a weekly Review Tickets (formative assessment) and concluding with an end of Review Ticket (summative assessment).  Sample sprint follows...
+Sprint is a period of time that Team uses to plan work and execute work.  This includes planning, research, development, deployment, and test.  Typically, <mark>sprints will be 4 weeks</mark> with shorter chekpoints in the classroom.  Anytime a sprint lasts longer than a week, there needs to be weekly Review Tickets (formative assessment) and concluding with an end of Sprint Review Ticket (summative assessment).  Sample sprint follows...
 - Week 1
     - Monday - Sprint Objectives, Scrum Team Planning
-    - Tuesday - Test Prep Tuesday (Student Led)
+    - Tuesday - College Board Test Prep Tuesday (Student Led)
     - Wednesday - Code, Code, Code
     - Thursday - Tech Talk (Teacher)
     - Friday - Code, Code, Code; Teacher 1 v 2, formative review
     - 2 hours outside of class for project work
 
-- Week 2
+...
+
+- Week 4
     - Monday - Sprint Crossover Grading,  Scrum Team Planning
-    - Tuesday - Test Prep Tuesday (Student Led)
+    - Tuesday - College Board Testing
     - Wednesday - Code, Code, Code
     - Thursday - Tech Talk (Teacher)
     - Friday - Code, Code, Code; Teacher 1 v 4 including Demos/Review Ticket/Peer, summative review
