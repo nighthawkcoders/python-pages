@@ -144,9 +144,10 @@ We live in a tech-heavy world, and you need to understand the tech your project 
 
 ## Hacks
 Key deliverables of this Tech Talk...
-- Build Team Agile Methodology Diagram, add Team Member roles
-- Create a Scrum Board as output of Team Stand-up Meeting
-- Build an individual Issue
-- Add to PBL vocabulary on your GH Pages
+- Build Team Agile Manifesto, adapt from manifest provided.  These points Teachers want to see adapted into your Manifesto: #1,#2,#5,#6,#7,#9,#12 
+- Build Team Agile Methodology Diagram, work in Manifesto elements, and add Team Member roles.
+- Create Issues and a Scrum Board as output of a Team Stand-up Meeting.  
+- Build an individual Issue(s) and link to your Time Box page
+- Add to PBL and Agile vocabulary on your personal GH Pages
 
 ![]({{site.baseurl}}/images/scrum.png)
