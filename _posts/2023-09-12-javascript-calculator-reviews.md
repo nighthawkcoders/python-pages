@@ -3,7 +3,7 @@ toc: false
 layout: post
 title: Calculator Reviews
 description: Build  _post or _notebook in your Blog to contain all the hacks from JS Input lecture.
-courses: { csse: {week: 4 } }
+courses: { csse: {week: 5 } }
 categories: []
 type: collab
 ---
@@ -25,3 +25,8 @@ In this task, you will work with the two provided calculators and adapt them to 
     - try to represent both calculation styles into a single web page.  Consider your design, perhaps a Canva drawing, before you attempt the task.  
     - customize backgrounds, instead of VANTA images, play a background movie with CSS
     - or any other idea of interest
+
+### Agile Plan
+I would like you to split work.  Two working on one calculator and Two working on the other.   There is a live share extention in VS Code where you could both work on the same code at the same time.  
+
+In the end (on this project), everyone will have Two Calculators in their own GH Pages Time Box.  Students are  not ready to work on a shared projects in GitHub.   We have formed collaboration teams, we need to build skills in collaboration, but we also need to manage our own files.  So, this will be a hybrid of "Collaboration", but still managing "Independent" work.
