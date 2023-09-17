@@ -2,7 +2,7 @@
 toc: true
 layout: post
 title: 1.1-1.4 Team Test
-description: Creat a video and build a notebook to review all the key questions from Big Idea 1
+description: Create a video and build a notebook to review all the key questions from Big Idea 1
 courses: { csp: {week: 5, categories: [4.A]} }
 categories: []
 type: collab
