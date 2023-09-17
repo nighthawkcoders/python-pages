@@ -5,7 +5,7 @@ title: JS Itunes API
 description: API's are a primary source for obtaining data from the internet.  There is imformation in API's for almost any interest.
 permalink: /frontend/home_table
 categories: [C7.0]
-courses: { csse: {week: 13}, csp: {week: 8, categories: [2.C]}, csa: {week: 2} }
+courses: { csse: {week: 13}, csp: {week: 5, categories: [2.C]}, csa: {week: 2} }
 type: ccc
 ---
 
