@@ -9,7 +9,7 @@ type: collab
 
 ## Product Owner Background
 
-Teacher wants students to leanrn Collaboration, and Full Stack Development.  I am looking for Projects to assist in gaining a passion for College Board Big Idea 2 - Data. Data Compression, 
+Teacher wants students to learn Collaboration, and Full Stack Development.  I am looking for Projects help students gain a passion for College Board Big Idea 2 - Data.
 
 - Evidence of understanding of Big Idea 2: Binary, Data Compression, and Extracting Information from Data are key topics.  Both College Board and Tech Talks will support Ideation on these topics.
 - In teams, with success on Team Test, there was typically a great division of work.  Dividing and Conquering was very evident, these skills will continue to be very important as you move to first objective of Ideation.
@@ -22,6 +22,7 @@ The recent Student Panel talked about making projects out of something you see, 
 - Turn something you are required to do into a passion project.  The Teacher got really excited about binary counting visualiztion/games, manipulating images (grey scale/sizing), and machine learning when reading and studying these College Board topics.  However, because of skills and capabilities I started my journey by building a simple list of Jokes to learn how to do APIs.
 
 This project has many layers of investigation.  Ideation code start on APIs.  Looking at these screens can be very helpful in meeting multipl requirements for this project (Prentation design - UI, Data Design - UML).
+
 - [API Design](https://nighthawkcoders.github.io/APCSP/api/overview)
 - [Jokes API](https://nighthawkcoders.github.io/APCSP/data/jokes).
 - [Covid API](https://nighthawkcoders.github.io/APCSP/data/covid)
@@ -54,7 +55,7 @@ The Theme for the 1st Trimester Passion Project must be on "Learning JavaScript 
 
 - Backend must contain APIs.  
 
-- An emphasis of project must be on Big Idea 2 - Data. 
+- An emphasis of project must be on Big Idea 2 - Data.
 
 - Each student must show evidence of Code, through GitHub analytics.  This evidence must show iteration of commits sustained over last six weeks of trimester.
 
