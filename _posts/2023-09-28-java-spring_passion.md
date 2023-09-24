@@ -9,7 +9,7 @@ type: collab
 
 ## Product Owner Background
 
-Teacher is struggling with means to get students passionate about both Collaboration and Java.  I am looking for Projects to install passion in these topics.
+Teacher is struggling with means to get students passionate about both Collaboration and Java.  I am looking for Projects to assist in creating passion for Collaboration and Java.
 
 - Evidence of understanding FRQ Method and Control Structures, Arrays and ArrayLists, 2D Arrays was not strongly evident in surpise test on September 22nd within many teams.
 - In teams, with success on September 22nd, there was typically a dominant programmer that was doing the majority of the work.  Coat tailing was very evident.  IMO, this presents two problems... a. dominant programmer needs to guide others  b. coat tailors need to get vested in activities.
