@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Passion Project Ideation
+title:  Game Project Ideation
 description: The key development task for remainder of the Term is a JavaScript game with animation.
 courses: { csse: {week: 7}}
 categories: []
