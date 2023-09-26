@@ -9,7 +9,7 @@ type: collab
 
 ## Product Owner Background
 
-Your Teacher wants thier students to learn Collaboration, and Full Stack Development.  I am looking for Projects help students gain a passion for College Board Big Idea 2 - Data.
+Your Teacher wants thier students to learn Collaboration, and Full Stack Development.  I am looking for Projects that help students gain a passion for College Board Big Idea 2 - Data.
 
 - Evidence of understanding of Big Idea 2: Binary, Data Compression, and Extracting Information from Data are key topics.  Both College Board and Tech Talks will support Ideation on these topics.
 - In teams, with success on Team Test, there was typically a great division of work.  Dividing and Conquering was very evident, these skills will continue to be very important as you move to first objective of Ideation.
@@ -19,7 +19,7 @@ Your Teacher wants thier students to learn Collaboration, and Full Stack Develop
 
 The recent Student Panel talked about making projects out of something you see, do, need, or like.  Right now, you must see "College Board Big Ideas" and "Collaboration" per this "Product Owner requirements document".
 
-- Turn something you are required to do into a passion project.  The Teacher got really excited about binary counting visualiztion/games, manipulating images (grey scale/sizing), and machine learning when reading and studying these College Board topics.  However, because of skills and capabilities I started my journey by building a simple list of Jokes to learn how to do APIs.
+- Turn something you are required to do into a passion project.  The Teacher got really excited about binary counting visualiztion/games, manipulating images (grey scale/sizing), and machine learning when reading and studying these College Board topics.  However, since I would like to build my skills and capabilities before working on something that complex, I started my journey by building a simple list of Jokes to learn how to do APIs.
 
 This project has many layers of investigation.  Ideation code start on APIs.  Looking at these screens can be very helpful in meeting multiple requirements for this project (Prentation design - UI, Data Design - UML).
 
