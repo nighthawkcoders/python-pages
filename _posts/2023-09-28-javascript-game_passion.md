@@ -9,23 +9,23 @@ type: collab
 
 ## Product Owner Background
 
-Teacher wants students to learn Collaboration and perform JavaScript Development. To learn JavaScript we will focus on Animation and Game development.
+The Teacher wants students to learn Collaboration and perform JavaScript Development. To learn JavaScript we will focus on Animation and Game development.
 
 - Collobarte with GitHub.  This is a key Software Engineering Skill.
   - GitHub repository.  Make a shared repository and add Collaborators (team members) to the repository.
   - GitHub Issues and Project.  Issues should be managed in a [Project Layer](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/changing-the-layout-of-a-view)
-  - Working on same work in parallel, working on same work with VS Code Live Share and commiting code in shared GitHub repo are key skills and make coders more productive.
+  - Working on the same work in parallel, working on the same work with VS Code Live Share and commiting code in a shared GitHub repo are key skills and make coders more productive.
 - Design. Use a tool like Figma or Canva to start to build layouts for the portions of the game you would like to emulate.  The better you plan, the better the Game potential for Nov 2nd.
   - A Team must have evidence of design, try [Figma](https://www.figma.com/) or [Canva](https://www.canva.com/).
-- Make a Video. Ideation phase will require a video.  This has benefit of making sure everyone review plan and has access to plan.
+- Make a Video. Ideation phase will require a video.  This has the benefit of making sure everyone reviews the plan and has access to the plan.
 
 ## Product Owner Ideas
 
-The recent Student Panel talked about making projects out of something you see, do, need, or like.  It is up to student team to pick the game.
+The recent Student Panel talked about making projects out of something you see, do, need, or like.  It is up to the student team to pick the game.
 
 - Turn something you are required to do into a passion project.
 
-- Often, mimicing an existing game or a portion of a game will help with Ideation.  Doing something with an idea requires a lot more desing and explanation.
+- Often, mimicing an existing game or a portion of a game will help with Ideation.  Doing something with an idea requires a lot more designing and explanation.
 
 ## Realizations and Adjustments to thinking
 
@@ -33,7 +33,7 @@ In an team, project, or life in general. there will be those that are better pre
 
 - The scrum master or lead programmer(s) could be responsible for bringing things together, but people working on foundation pieces need to be responsive to "management", not check out or quit.
 - Scrum Team roles and an Agile Manifesto should be adapted to skill sets of team.
-- Don't be reluctant to be you; don't try to fake you.  Teacher quickly knows of your contirubions,capabilities, and participation.  Remember, Teacher has tons of analytics on you from GitHub alone.  Be real, improve on you and points will come.  
+- Don't be reluctant to be you; don't try to fake you. The Teacher quickly knows of your contirubions,capabilities, and participation.  Remember, the Teacher has tons of analytics on you from GitHub alone.  Be real, improve on you and points will come.  
 
 ![equity]({{site.baseurl}}/images/equity.png)
 
@@ -47,12 +47,12 @@ The Theme for the 1st Trimester Passion Project must be on "Learning JavaScript 
 
 - Each student must show evidence of completing team goals and objectives.  
 
-- Team/Scrum Master must have evidence of collaboration.  This is particularly import at Ideation Checkpoint.  Make sure that Team members get credit for work completed through issues.
+- Team/Scrum Master must have evidence of collaboration.  This is particularly important at the Ideation Checkpoint.  Make sure that Team members get credit for work completed through issues.
   - Pick a project idea.  Discuss if you are planning to mimic an classic game.
   
   - Team must have evidence of design (Figma or Canva)
   
-  - Start project by setting up a repository.  Make sure each member has a commit.
+  - Start project by setting up a shared repository.  Make sure each member has a commit.
 
   - Show initial issues and project management plan using GitHub tools.
 
