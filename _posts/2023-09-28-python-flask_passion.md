@@ -9,7 +9,7 @@ type: collab
 
 ## Product Owner Background
 
-Your Teacher wants thier students to learn Collaboration, and Full Stack Development.  I am looking for Projects help students gain a passion for College Board Big Idea 2 - Data.
+Your Teacher wants their students to learn Collaboration, and Full Stack Development.  I am looking for Projects help students gain a passion for College Board Big Idea 2 - Data.
 
 - Evidence of understanding of Big Idea 2: Binary, Data Compression, and Extracting Information from Data are key topics.  Both College Board and Tech Talks will support Ideation on these topics.
 - In teams, with success on Team Test, there was typically a great division of work.  Dividing and Conquering was very evident, these skills will continue to be very important as you move to first objective of Ideation.
