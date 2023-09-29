@@ -15,9 +15,9 @@ Total points 4
 ### Each Hack
 
 * .5 point:  Have a working HTML code cell in a notebook based on the wireframe representation provided under HTML hacks (HTML Hack)
-* .5 point:  Have a working javascript code cell in a notebook based on the instructions provided under data types hacks (Data Types Hack)
+* .5 point:  Have a working javascript code cell in a notebook which creates, manipulates, and logs an object (Data Types Hack)
 * .5 point: Have a working javascript code cell in a notebook which modifies elements in the first HTML code cell hack or another HTML code cell based on the same wireframe representation (DOM Hack)
-* .5 point: Have a working javascript code cell in a notebook based on the instructions provided in the javascript hack (Javascript Hack)
+* .5 point: Have a working javascript code cell in a notebook which compares two variables (Javascript Hack)
 * .5 point: Have code cells in a notebook which shows the corrections made to the first three code cells in the 1.4 correcting errors page (Correcting Errors Hack)
 
 ### Reviews and Scoring
