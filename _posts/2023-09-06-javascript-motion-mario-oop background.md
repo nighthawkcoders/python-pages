@@ -9,8 +9,8 @@ type: ccc
 ---
 
 {% assign alienPlanetFile = site.baseurl | append: page.image %}
-{% assign WIDTH = 8000 %}
-{% assign HEIGHT = 4000 %}
+{% assign WIDTH = 2000 %}
+{% assign HEIGHT = 2000 %}
 
 
 <style>
@@ -31,17 +31,20 @@ type: ccc
 <script>
   const canvas = document.getElementById("alienWorld");
   const ctx = canvas.getContext('2d');
+  var gameSpeed = 3;
 
   class Layer {
-    constructor(image, speed) {
+    constructor(image, speedRatio) {
       this.x = 0;
       this.y = 0;
       this.width = {{WIDTH}};
       this.height ={{HEIGHT}};
-      this.speed = speed;
+      this.image = image
+      this.speedRatio = speedRatio
+      this.speed = gameSpeed * this.speedRatio;
     }
     update(){
-      this.x == this.speed;
+      this.x -= this.speed;
     }
     draw(){
       ctx.drawImage(this.image, this.x, this.y);
@@ -49,18 +52,17 @@ type: ccc
   }
   
   // constant variables used for background
-  const CANVAS_WIDTH = canvas.width = 8000;
-  const CANVAS_HEIGHT = canvas.height = 4000;
+  const CANVAS_WIDTH = canvas.width = {{WIDTH}};
+  const CANVAS_HEIGHT = canvas.height = {{HEIGHT}};
 
-  const backgroundLayer = new Image();
-  backgroundLayer.src = '{{alienPlanetFile}}';
+  const backgroundImg = new Image();
+  backgroundImg.src = '{{alienPlanetFile}}';
+  var backgroundObj = new Layer(backgroundImg, 1)
 
-  var x = 0;
-  var speed = 5;
   function background() {
-    ctx.drawImage(backgroundLayer, x, 0);
+    backgroundObj.update();
+    backgroundObj.draw();
     requestAnimationFrame(background);
-    x -= speed;
   }
   background();
 
