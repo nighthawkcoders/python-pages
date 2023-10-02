@@ -9,8 +9,8 @@ type: ccc
 ---
 
 {% assign alienPlanetFile = site.baseurl | append: page.image %}
-{% assign WIDTH = 4192 %}
-{% assign HEIGHT = 2048 %}
+{% assign WIDTH = 7000 %}
+{% assign HEIGHT = 2500 %}
 
 <canvas id="alienWorld"></canvas>
 
@@ -22,31 +22,22 @@ type: ccc
   const maxWidth = window.innerWidth;
   const maxHeight = window.innerHeight;
 
-  let canvasWidth, canvasHeight;
+  // Set canvas dimensions to match the image width
+  const canvasWidth = {{WIDTH}};
+  const canvasHeight = canvasWidth / ASPECT_RATIO;
 
-  // Calculate the canvas dimensions based on the window size and the image's aspect ratio
-  if (maxWidth / ASPECT_RATIO <= maxHeight) {
-    canvasWidth = maxWidth;
-    canvasHeight = canvasWidth / ASPECT_RATIO;
-  } else {
-    canvasHeight = maxHeight;
-    canvasWidth = canvasHeight * ASPECT_RATIO;
-  }
-
-  // Set canvas dimensions and scale it using CSS
-  canvas.width = {{WIDTH}};
-  canvas.height = {{HEIGHT}};
+  canvas.width = canvasWidth;
+  canvas.height = canvasHeight;
   canvas.style.width = `${canvasWidth}px`;
   canvas.style.height = `${canvasHeight}px`;
 
-  // Center the canvas both horizontally and vertically
-  const canvasLeft = (maxWidth - canvasWidth) / 2;
+  const canvasLeft = 0; // Start from the left edge
   const canvasTop = (maxHeight - canvasHeight) / 2;
   canvas.style.position = 'absolute';
   canvas.style.left = `${canvasLeft}px`;
   canvas.style.top = `${canvasTop}px`;
 
-  var gameSpeed = 10;
+  var gameSpeed = 5;
   class Layer {
     constructor(image, speedRatio) {
       this.x = 0;
@@ -60,9 +51,6 @@ type: ccc
     }
     update() {
       this.x = (this.x - this.speed) % this.width;
-      if (this.x <= -this.width) {
-        this.x = 0;
-      }
     }
     draw(){
       ctx.drawImage(this.image, this.x, this.y);
