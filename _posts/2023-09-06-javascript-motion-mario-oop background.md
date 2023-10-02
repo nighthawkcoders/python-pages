@@ -9,14 +9,17 @@ type: ccc
 ---
 
 {% assign alienPlanetFile = site.baseurl | append: page.image %}
+{% assign WIDTH = 8000 %}
+{% assign HEIGHT = 4000 %}
+
 
 <style>
 
   #alienWorld {
     position: absolute;
     border: 3px solid white;
-    width 8000px;
-    height 4000px;
+    width {{WIDTH}}px;
+    height {{HEIGHT}}px;
     transform: translate(-50%, -50%);
     top 50%;
     left 50%;
@@ -33,8 +36,8 @@ type: ccc
     constructor(image, speed) {
       this.x = 0;
       this.y = 0;
-      this.width = 8000;
-      this.height = 4000;
+      this.width = {{WIDTH}};
+      this.height ={{HEIGHT}};
       this.speed = speed;
     }
     update(){
