@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Alien World
+title: Alien World Background
 description: Use JavaScript without external libararies to animate Mario moving across screen, OOP style.
 categories: [C5.0, C7.0, C7.6]
 image: /images/alien_planet.jpg
-courses: { csse: {week: 6}, csp: {week: 13}, csa: {week: 3} }
+courses: { csse: {week: 10} }
 type: ccc
 ---
 
@@ -12,27 +12,41 @@ type: ccc
 {% assign WIDTH = 4192 %}
 {% assign HEIGHT = 2048 %}
 
-
-<style>
-
-  #alienWorld {
-    position: absolute;
-    border: 3px solid white;
-    width {{WIDTH}}px;
-    height {{HEIGHT}}px;
-    transform: translate(-50%, -50%);
-    top 50%;
-    left 50%;
-  }
-</style>
-
 <canvas id="alienWorld"></canvas>
 
 <script>
   const canvas = document.getElementById("alienWorld");
   const ctx = canvas.getContext('2d');
-  var gameSpeed = 5;
 
+  const ASPECT_RATIO = {{WIDTH}} / {{HEIGHT}};
+  const maxWidth = window.innerWidth;
+  const maxHeight = window.innerHeight;
+
+  let canvasWidth, canvasHeight;
+
+  // Calculate the canvas dimensions based on the window size and the image's aspect ratio
+  if (maxWidth / ASPECT_RATIO <= maxHeight) {
+    canvasWidth = maxWidth;
+    canvasHeight = canvasWidth / ASPECT_RATIO;
+  } else {
+    canvasHeight = maxHeight;
+    canvasWidth = canvasHeight * ASPECT_RATIO;
+  }
+
+  // Set canvas dimensions and scale it using CSS
+  canvas.width = {{WIDTH}};
+  canvas.height = {{HEIGHT}};
+  canvas.style.width = `${canvasWidth}px`;
+  canvas.style.height = `${canvasHeight}px`;
+
+  // Center the canvas both horizontally and vertically
+  const canvasLeft = (maxWidth - canvasWidth) / 2;
+  const canvasTop = (maxHeight - canvasHeight) / 2;
+  canvas.style.position = 'absolute';
+  canvas.style.left = `${canvasLeft}px`;
+  canvas.style.top = `${canvasTop}px`;
+
+  var gameSpeed = 10;
   class Layer {
     constructor(image, speedRatio) {
       this.x = 0;
@@ -42,23 +56,18 @@ type: ccc
       this.image = image
       this.speedRatio = speedRatio
       this.speed = gameSpeed * this.speedRatio;
+      this.frame = 0;
     }
-    update(){
+    update() {
+      this.x = (this.x - this.speed) % this.width;
       if (this.x <= -this.width) {
         this.x = 0;
-      } else {
-        this.x = Math.floor(this.x -= this.speed);
       }
-
     }
     draw(){
       ctx.drawImage(this.image, this.x, this.y);
     }
   }
-  
-  // constant variables used for background
-  const CANVAS_WIDTH = canvas.width = {{WIDTH}};
-  const CANVAS_HEIGHT = canvas.height = {{HEIGHT}};
 
   const backgroundImg = new Image();
   backgroundImg.src = '{{alienPlanetFile}}';
