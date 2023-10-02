@@ -9,8 +9,8 @@ type: ccc
 ---
 
 {% assign alienPlanetFile = site.baseurl | append: page.image %}
-{% assign WIDTH = 2000 %}
-{% assign HEIGHT = 2000 %}
+{% assign WIDTH = 4192 %}
+{% assign HEIGHT = 2048 %}
 
 
 <style>
@@ -31,7 +31,7 @@ type: ccc
 <script>
   const canvas = document.getElementById("alienWorld");
   const ctx = canvas.getContext('2d');
-  var gameSpeed = 3;
+  var gameSpeed = 5;
 
   class Layer {
     constructor(image, speedRatio) {
@@ -44,7 +44,12 @@ type: ccc
       this.speed = gameSpeed * this.speedRatio;
     }
     update(){
-      this.x -= this.speed;
+      if (this.x <= -this.width) {
+        this.x = 0;
+      } else {
+        this.x = Math.floor(this.x -= this.speed);
+      }
+
     }
     draw(){
       ctx.drawImage(this.image, this.x, this.y);
@@ -57,7 +62,7 @@ type: ccc
 
   const backgroundImg = new Image();
   backgroundImg.src = '{{alienPlanetFile}}';
-  var backgroundObj = new Layer(backgroundImg, 1)
+  var backgroundObj = new Layer(backgroundImg, 0.5)
 
   function background() {
     backgroundObj.update();
