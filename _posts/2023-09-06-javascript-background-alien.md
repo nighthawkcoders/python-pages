@@ -22,17 +22,18 @@ type: ccc
   const maxWidth = window.innerWidth;
   const maxHeight = window.innerHeight;
 
-  // Set canvas dimensions to match the image width
+  // Set Dimensions to match the image width
   const canvasWidth = {{WIDTH}};
   const canvasHeight = canvasWidth / ASPECT_RATIO;
+  const canvasLeft = 0; // Start from the left edge
+  const canvasTop = (maxHeight - canvasHeight) / 2;
 
+  // Set Style properties
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
   canvas.style.width = `${canvasWidth}px`;
   canvas.style.height = `${canvasHeight}px`;
 
-  const canvasLeft = 0; // Start from the left edge
-  const canvasTop = (maxHeight - canvasHeight) / 2;
   canvas.style.position = 'absolute';
   canvas.style.left = `${canvasLeft}px`;
   canvas.style.top = `${canvasTop}px`;
