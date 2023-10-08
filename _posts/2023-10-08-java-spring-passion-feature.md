@@ -9,9 +9,8 @@ type: collab
 
 ## Passion Project Feature Check
 
-Looking for the following...
+Show Big ideas and feature progress ...
 
-- Big idea. Looking for useful or analytical solution to my delima of Collaboration and usage of Java.  Turn something you see into passion.
-- Frontend/JavaScript.  Initial feature pages that show ideas running user interactions.  
+- Show Collaboration including Issues/Scrum Board that capture progress.
+- Frontend/JavaScript.  Initial feature pages that show ideas running screens and user interactions.  
 - Backend Data/Java.  APIs, Data that work with Postman.
-- Collaboration. Issues/Scrum Board that capture progress.
