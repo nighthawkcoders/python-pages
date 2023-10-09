@@ -19,7 +19,7 @@ JSON Web Token (JWT) is a popular way to authenticate users in a web application
 Here is an example of how you might use JWT for authentication in a JavaScript application:
 
 1. The client sends a login request to the server with the user's credentials (e.g., username and password).
-    - Client/Origin: <https://nighthawkcoders.github.io>
+    - Client/Origin: <https://nighthawkcoders.github.io/APCSA/data/login>
     - Server/Host: spring.nighthawkcodingsociety.com
 2. If the credentials are valid, the server generates a JWT and sends it back to the client.  Here ae some sample credentials.
     - Sec-Fetch-Mode: cors
@@ -169,7 +169,7 @@ function login_user(){
 }
 ```
 
-You can then use the JWT for authentication in subsequent fetch requests as the browser sends JWT in the Authorization header.   Here is an example, but there is *** Nothing Unique *** in this example.  
+You can then use the JWT for authentication in subsequent fetch requests as the browser sends JWT in the Authorization header.   Here is an example, but there is ***Nothing Unique*** in this example.  
 
 ```javascript
 // prepare HTML result container for new output
@@ -255,7 +255,7 @@ You can then use the JWT for authentication in subsequent fetch requests as the 
 >
 > Additional user and security elements.
 
-- security/SecurityConfig.java.   
+- security/SecurityConfig.java.
   - This code sets up BCrypt as password encoder, this is wired into Spring Security
   - HTTP security is changed so that you white list things that you want secure.  It is possible to do this either way, white list authenticated `.antMatchers("/api/person/**").authenticated()` or white list permitted `.antMatchers("/", "/frontend/**").permitAll()`.  In either case, it is valuable to have a convention on naming endpoints to simplify rules.
 
