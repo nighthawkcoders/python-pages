@@ -20,7 +20,7 @@ Here is an example of how you might use JWT for authentication in a JavaScript a
 
 1. The client sends a login request to the server with the user's credentials (e.g., username and password).
     - Client/Origin: <https://nighthawkcoders.github.io/APCSA/data/login>
-    - Server/Host: spring.nighthawkcodingsociety.com
+    - Server/Host: <https://spring.nighthawkcodingsociety.com/>
 2. If the credentials are valid, the server generates a JWT and sends it back to the client.  Here ae some sample credentials.
     - Sec-Fetch-Mode: cors
     - Sec-Fetch-Site: cross-site
@@ -47,10 +47,9 @@ ChatGPT says ... It is generally recommended to use a combination of options to 
 
 However, for this implementation we have used ***#3 HttpOnly Cookie***.
 
-
 ### Key Configuration Areas
 
-#### Nginx configuration snippet (Client to this Server):
+#### Nginx configuration snippet (Client to this Server)
 >
 > Nginx. Focus on add_header in preflight that allow cross domain (github.io) to access server.
 
@@ -70,7 +69,6 @@ location / {
 
     }
 ```
-
 
 #### Java JWT / Authenticate API
 >
@@ -108,7 +106,7 @@ public ResponseEntity<?> createAuthenticationToken(@RequestBody Person authentic
 
 #### Java Security Config
 >
-> Java. CORS enablement and headers to allow access to API endpoints from cross origin. 
+> Java. CORS enablement and headers to allow access to API endpoints from cross origin.
 
 ```java
 .cors().and()
@@ -121,8 +119,8 @@ public ResponseEntity<?> createAuthenticationToken(@RequestBody Person authentic
         //.addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-Origin", "https://nighthawkcoders.github.io", "http://localhost:4000"))
 ```
 
-#### Authenticate with JWT in a JavaScript application:
->
+#### Authenticate with JWT in a JavaScript application
+
 > This example sends a POST request to the /authorize endpoint with the user's credentials in the request body. If the login was successful, the server will return a 200 OK response with the JWT set to Application properties.
 
 ```javascript
@@ -244,7 +242,7 @@ You can then use the JWT for authentication in subsequent fetch requests as the 
 > This is first time that a nighthawkcoding society apps are under JWT.  There are some best practices, but these are simply preliminary thoughts.  These can be done in your project or on mine.
 
 - GitHub Pages Application
-  - Make a Login and SignUp option in upper left corner of page.  To handle this well it may require some them adjustment.  Login or Name should alway be displayed in upper right corner, review [csa.nighthawkcodingsociety.com](https://csa.nighthawkcodingsociety.com/) for example. 
+  - Make a Login and SignUp option in upper left corner of page.  To handle this well it may require some them adjustment.  Login or Name should alway be displayed in upper right corner, review [csa.nighthawkcodingsociety.com](https://csa.nighthawkcodingsociety.com/) for example.
   - Only block or present login/signup page when someone fails on a fetch of something that is unauthorized.
   - Spring Application
   - Add Roles to authentication
@@ -355,7 +353,7 @@ public class PersonDetailsService implements UserDetailsService {  // "implement
 ```
 
 - mvc\ModelInit.java, used to initialize database for testing
-  - The `CommandLineRunner run()` occurs prior to web site port being available.  Typically, there is only one Bean of type without application.properties override.  Thus, you see jokes and person in same runner.  Splitting this and having Person initialization in person package is desireable. 
+  - The `CommandLineRunner run()` occurs prior to web site port being available.  Typically, there is only one Bean of type without application.properties override.  Thus, you see jokes and person in same runner.  Splitting this and having Person initialization in person package is desireable.
   - Class methods for Person (`Person.init`) is used to initialize object.  
   - Each object is checked and saved using `personService` methods.
   - Test Notes are added to ensure functionality.  Intention is to add notes into person package.
