@@ -1,9 +1,9 @@
 ---
 toc: true
 comments: false
-layout: default
-title:  Spring Security using Java Web Tokens
-description: Manage access and roles to a backend Java Spring Security Application using Java Web Tokens.
+layout: defaultJava
+title:  Spring Security using JWT
+description: Manage access and roles to a backend Java Spring Security Application using JSON Web Tokens.
 courses: { csa: {week: 8, categories: []} }
 categories: []
 type: devops
