@@ -3,7 +3,7 @@ PORT ?= 4100
 REPO_NAME ?= teacher
 LOG_FILE = /tmp/jekyll$(PORT).log
 
-SHELL = /bin/bash
+SHELL = /bin/bash -c
 .SHELLFLAGS = -e # Exceptions will stop make, works on MacOS
 
 # Phony Targets, makefile housekeeping for below definitions
@@ -64,7 +64,7 @@ server: stop convert
 
 # Convert .ipynb files to Markdown with front matter
 convert: $(MARKDOWN_FILES)
-	
+
 # Convert .md file, if .ipynb file is newer
 $(DESTINATION_DIRECTORY)/%_IPYNB_2_.md: _notebooks/%.ipynb
 	@echo "Converting source $< to destination $@"
