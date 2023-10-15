@@ -5,7 +5,7 @@ layout: post
 title: API, Data Strategies
 description: Resource guide to using and making APIs.  This includes AWS, Postman, 3rd Party APIs, and Code expertise.
 type: devops
-courses: { csp: {week: 8} }
+courses: { csp: {week: 9} }
 ---
 
 ## API, Data Resources
