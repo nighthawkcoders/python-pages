@@ -51,17 +51,12 @@ author: Finn
         const username = document.getElementById("github-user").value;
         const ApClass = document.getElementById("class").value;
 
-        const personalAccessToken = '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';
-        const headers = {
-            Authorization: `token ${personalAccessToken}`
-        };
-
         const recentDays = new Date();
         recentDays.setDate(recentDays.getDate() - 10); // Calculate the date 10 days ago
 
         // Fetch user information
         const userApi = `https://api.github.com/users/${username}`;
-        fetch(userApi, headers)
+        fetch(userApi)
             .then(response => response.json())
             .then(userData => {
                 // Extract user status information here and use it as needed
@@ -74,8 +69,12 @@ author: Finn
                 console.error("Error fetching user information:", error);
             });
 
+        const tenDaysAgo = new Date();
+        tenDaysAgo.setDate(tenDaysAgo.getDate() - 10); // Calculate the date 10 days ago
+
+        const repoPath = `https://github.com/${username}/`;
         const repoAPI = `https://api.github.com/users/${username}/repos`;
-        fetch(repoAPI, headers)
+        fetch(repoAPI)
             .then(response => response.json())
             .then(data => {
                 repoLinks.innerHTML = "";
@@ -84,12 +83,12 @@ author: Finn
                 const commitPromises = data.map(repo => {
                     const repoName = repo.name;
                     const repoCommitsApi = `https://api.github.com/repos/${username}/${repoName}/commits`;
-                    return fetch(repoCommitsApi, headers)
+                    return fetch(repoCommitsApi)
                         .then(response => response.json())
                         .then(commitsData => {
                             // Check if there are commits in the last 10 days
                             const lastCommitDate = new Date(commitsData[0]?.commit?.author?.date || repo.updated_at);
-                            if (lastCommitDate > recentDays) {
+                            if (lastCommitDate > tenDaysAgo) {
                                 return {
                                     name: repoName,
                                     commitCount: commitsData.length,
@@ -132,10 +131,8 @@ author: Finn
                     });
             });
 
-
         const apiUrl = `https://api.github.com/users/${username}`;
-
-        fetch(apiUrl, headers)
+        fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
                 const avatarUrl = data.avatar_url;
