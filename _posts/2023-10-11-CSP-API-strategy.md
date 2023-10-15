@@ -66,7 +66,7 @@ Load three files that are pertinant to this excercise.
 
 ![joke run]({{site.baseurl}}/images/jokes/run.png)
 
-#### Observations and actions
+#### Run Observations and actions
 
 This start the application use Python with Debugging on.  The objective is to load Web Server.  Look at Terminal for outputs.
 
@@ -106,19 +106,19 @@ Learn to setup break point and usage of play controls(continue, step over, step 
 - Call endpoint from Browser
 - Observe code stopping and play controls
 
-#### Observation and actions
+#### Debug Observations and actions
 
 - Open Locals self observe endpoint and method
 - Step into code observe that step takes you to jokes.py
 - Open Globals jokes_data
 - Hover over jokes_data in code
-- Press continue play control and observe data in browser 
+- Press continue play control and observe data in browser
 
 ### Debug api/joke.py with Postman
 
 Similar debugging goals as previous, but now we can perform put method as well as get methond.
 
-#### Observation and actions
+#### Postman Observation and actions
 
 - [Download Postman](https://www.postman.com/downloads/) for free
 - Build Collections
