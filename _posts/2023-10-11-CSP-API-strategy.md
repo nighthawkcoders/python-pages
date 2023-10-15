@@ -54,10 +54,64 @@ Starting to learn about persistent data and databases with APIs is something tha
 
 ## Backend Session on Jokes
 
-Setup VSCode as Follows
+### Setup VSCode as Follows
+
+Load three files that are pertinant to this excercise.
 
 - main.py, run the application with Debugging
 - api/joke.py, endpoint for each joke interface
 - model/jokes.py, model means data or data for jokes
 
+#### Run Web Application Locally
+
 ![joke run]({{site.baseurl}}/images/jokes/run.png)
+
+#### Observations and actions
+
+This start the application use Python with Debugging on.  The objective is to load Web Server.  Look at Terminal for outputs.
+
+### Review api/joke.py
+
+Now is a good time to look at code around this code.
+
+- Definition of joke_api with browser prefix /api/jokes.
+
+```python
+joke_api = Blueprint('joke_api', __name__,
+                   url_prefix='/api/jokes')
+
+# API generator https://flask-restful.readthedocs.io/en/latest/api.html#id1
+api = Api(joke_api)
+```
+
+- _Read resource is defined using "get" method
+
+```python
+class _Read(Resource):
+        def get(self):
+            return jsonify(getJokes())
+```
+
+- api /api/jokes/
+
+```python
+api.add_resource(_Read, '/')
+```
+
+### Debug api/joke.py
+
+Learn to setup break point and usage of play controls(continue, step over, step into, step out)
+
+- Setup breakpoint in Code
+- Call endpoint from Browser
+- Observe code stopping and play controls
+
+![joke run]({{site.baseurl}}/images/jokes/run.png)
+
+#### Observation and actions
+
+- Open Locals self observe endpoint and method
+- Step into code observe that step takes you to jokes.py
+- Open Globals jokes_data
+- Hover over jokes_data in code
+- Press continue play control and observe data in browser 
