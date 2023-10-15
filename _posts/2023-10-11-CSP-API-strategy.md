@@ -51,3 +51,13 @@ Starting to learn about persistent data and databases with APIs is something tha
   - Developer learns CRUD operations and Database access
   - Python Endpoints and CRUD
   - JavaScript Fetch and Display
+
+## Backend Session on Jokes
+
+Setup VSCode as Follows
+
+- main.py, run the application with Debugging
+- api/joke.py, endpoint for each joke interface
+- model/jokes.py, model means data or data for jokes
+
+![joke run]({{site.baseurl}}/images/jokes/run.png)
