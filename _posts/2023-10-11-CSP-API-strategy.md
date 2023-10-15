@@ -130,3 +130,8 @@ Similar debugging goals as previous, but now we can perform put method as well a
 - Set Breakpoints in Code and Observe
 
 ![joke run]({{site.baseurl}}/images/jokes/postman.png)
+
+## Hacks
+
+- Build Collection of API tests in Postman
+- Extra.  Write code for _Create method for Jokes, hint use Body to pass data versus command line
