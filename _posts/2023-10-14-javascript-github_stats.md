@@ -127,7 +127,6 @@ author: Finn
 
                                 const listItem = document.createElement("li");
                                 listItem.appendChild(repoLink);
-                                listItem.appendChild(" ");
                                 listItem.appendChild(commitCountText);
 
                                 repoLinks.appendChild(listItem);
