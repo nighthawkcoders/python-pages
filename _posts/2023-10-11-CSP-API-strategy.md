@@ -98,15 +98,13 @@ class _Read(Resource):
 api.add_resource(_Read, '/')
 ```
 
-### Debug api/joke.py
+### Debug api/joke.py with Browswer
 
 Learn to setup break point and usage of play controls(continue, step over, step into, step out)
 
 - Setup breakpoint in Code
 - Call endpoint from Browser
 - Observe code stopping and play controls
-
-![joke run]({{site.baseurl}}/images/jokes/run.png)
 
 #### Observation and actions
 
@@ -115,3 +113,18 @@ Learn to setup break point and usage of play controls(continue, step over, step 
 - Open Globals jokes_data
 - Hover over jokes_data in code
 - Press continue play control and observe data in browser 
+
+### Debug api/joke.py with Postman
+
+Similar debugging goals as previous, but now we can perform put method as well as get methond.
+
+#### Observation and actions
+
+- [Download Postman](https://www.postman.com/downloads/) for free
+- Build Collections
+  - Get APIs
+  - Put APIs
+- Test Collections
+- Set Breakpoints in Code and Observe
+
+![joke run]({{site.baseurl}}/images/jokes/postman.png)
