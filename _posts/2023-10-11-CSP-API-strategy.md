@@ -102,6 +102,8 @@ api.add_resource(_Read, '/')
 
 Learn to setup break point and usage of play controls(continue, step over, step into, step out)
 
+![joke debug]({{site.baseurl}}/images/jokes/debug.png)
+
 - Setup breakpoint in Code
 - Call endpoint from Browser
 - Observe code stopping and play controls
