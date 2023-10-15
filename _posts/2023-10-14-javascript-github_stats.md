@@ -69,9 +69,10 @@ author: Finn
                 console.error("Error fetching user information:", error);
             });
 
-        const tenDaysAgo = new Date();
-        tenDaysAgo.setDate(tenDaysAgo.getDate() - 10); // Calculate the date 10 days ago
 
+        /*Find all GitHub repositories owned by user
+         *build links to recently active repositories
+        */
         const repoPath = `https://github.com/${username}/`;
         const repoAPI = `https://api.github.com/users/${username}/repos`;
         fetch(repoAPI)
@@ -79,16 +80,21 @@ author: Finn
             .then(data => {
                 repoLinks.innerHTML = "";
 
-                // Create an array of promises to fetch commit data for each repository
+                /*Create an array of Promises
+                 *fetch commit data for each repository
+                */
                 const commitPromises = data.map(repo => {
                     const repoName = repo.name;
                     const repoCommitsApi = `https://api.github.com/repos/${username}/${repoName}/commits`;
+                    console.log(repoCommitsApi);
+
+                    // fetch for commit data
                     return fetch(repoCommitsApi)
                         .then(response => response.json())
                         .then(commitsData => {
-                            // Check if there are commits in the last 10 days
+                            // Check if there are recent commits
                             const lastCommitDate = new Date(commitsData[0]?.commit?.author?.date || repo.updated_at);
-                            if (lastCommitDate > tenDaysAgo) {
+                            if (lastCommitDate > recentDays) {
                                 return {
                                     name: repoName,
                                     commitCount: commitsData.length,
@@ -107,7 +113,7 @@ author: Finn
                 Promise.all(commitPromises)
                     .then(repositories => {
                         repositories
-                            .filter(repo => repo !== null) // Filter out repositories with no commits in the last 10 days
+                            .filter(repo => repo !== null) // Filter out repositories with no recent commits
                             .forEach(repo => {
                                 const repoName = repo.name;
                                 const repoURL = `${repoPath}${repoName}`;
@@ -121,6 +127,7 @@ author: Finn
 
                                 const listItem = document.createElement("li");
                                 listItem.appendChild(repoLink);
+                                listItem.appendChild(" ");
                                 listItem.appendChild(commitCountText);
 
                                 repoLinks.appendChild(listItem);
