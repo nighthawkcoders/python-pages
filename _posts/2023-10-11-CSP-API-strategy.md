@@ -133,5 +133,8 @@ Similar debugging goals as previous, but now we can perform put method as well a
 
 ## Hacks
 
-- Build Collection of API tests in Postman
+- Build Collection of API tests in Postman on localhost.
+- Try APIs off of a deployed server: <https://flask.nighthawkcodingsociety.com/api/jokes>
 - Extra.  Write code for _Create method for Jokes, hint use Body to pass data versus command line
+- Extra.  Write your own frontend code to read your own Jokes API.   Here is example.  
+  - [Sample github.io Frontend Runtime](https://nighthawkcoders.github.io/APCSP/data/jokes) - [Sample github.io Raw Code](https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_posts/2022-07-10-PBL-jokes.md).
