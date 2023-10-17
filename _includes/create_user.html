@@ -38,34 +38,40 @@
 	// const apiUrl = "http://localhost:8180/api/users/";
 	let users = [];
 
-	async function fetchUsers() {
-		const response = await fetch(apiUrl);
-		users = await response.json();
-		const table = document.getElementById("userTable");
+	function fetchUsers() {
+		fetch(apiUrl)
+			.then((response) => response.json())
+			.then((response) => {
+				users = response;
 
-		users.forEach((user, idx) => {
-			const row = table.insertRow();
-			row.setAttribute("data-id", user.id);
-			["name", "uid", "active_classes", "archived_classes", "server_needed"].forEach((field) => {
-				const cell = row.insertCell();
-				if (user[field] === "none") {
-					users[idx][field] = "";
-				}
-				cell.innerText = users[idx][field];
+				const table = document.getElementById("userTable");
+				users.forEach((user, idx) => {
+					const row = table.insertRow();
+
+					row.setAttribute("data-id", user.id);
+					["name", "uid", "active_classes", "archived_classes", "server_needed"].forEach(
+						(field) => {
+							const cell = row.insertCell();
+							if (user[field] === "none") {
+								users[idx][field] = "";
+							}
+							cell.innerText = users[idx][field];
+						}
+					);
+
+					const editCell = row.insertCell();
+					const editButton = document.createElement("button");
+					editButton.innerHTML = "Edit";
+					editButton.addEventListener("click", editUser);
+					editCell.appendChild(editButton);
+
+					const deleteCell = row.insertCell();
+					const deleteButton = document.createElement("button");
+					deleteButton.innerText = "Delete";
+					deleteButton.addEventListener("click", () => deleteUser(user.id, row));
+					deleteCell.appendChild(deleteButton);
+				});
 			});
-
-			const editCell = row.insertCell();
-			const editButton = document.createElement("button");
-			editButton.innerHTML = "Edit";
-			editButton.addEventListener("click", editUser);
-			editCell.appendChild(editButton);
-
-			const deleteCell = row.insertCell();
-			const deleteButton = document.createElement("button");
-			deleteButton.innerText = "Delete";
-			deleteButton.addEventListener("click", () => deleteUser(user.id, row));
-			deleteCell.appendChild(deleteButton);
-		});
 	}
 
 	function submitForm(event) {
@@ -142,7 +148,6 @@
 		const form = document.getElementById("editForm");
 		const user = users.find((u) => u.id == id);
 
-		// Populate fields
 		form.querySelector("#editGithubUsername").value = user.uid;
 		form.querySelector("#editFullName").value = user.name;
 
@@ -164,9 +169,9 @@
 		document.getElementById("editModalBackdrop").style.display = "block";
 	}
 
+	// Fetch users and ensure close modal interaction
 	document.addEventListener("DOMContentLoaded", function () {
 		fetchUsers();
-
 		document.getElementById("closeModal").addEventListener("click", function () {
 			document.getElementById("editModalBackdrop").style.display = "none";
 		});
