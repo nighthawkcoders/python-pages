@@ -2,6 +2,7 @@
 layout: post
 toc: true
 title: JWT Tokens Implementation
+author: Aidan Wu
 description: Implementing JWT Tokens into spring boot project.
 courses: { csp: {week: 13, categories: [6.B]} }
 categories: [C7.0]
@@ -64,5 +65,5 @@ Notice how we have a jwt cookie now
 Reload and http://localhost:8085/ should load without 401 error
 ![authorized](https://user-images.githubusercontent.com/56620132/214109803-70c12715-a6f5-48e5-9865-757cdb6cedaf.png)
 
-## What's next
-Roles can also be implemented next based on the old csa project and an actual frontend would be great.
+## Changes
+There have been some changes like the implementation of ```UserDetailsService``` and [dependency upgrades](https://github.com/nighthawkcoders/spring_portfolio/issues/12) to the code above.
