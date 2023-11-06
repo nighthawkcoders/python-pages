@@ -3,15 +3,17 @@ layout: post
 toc: true
 title:  Spring Security using Java Web Tokens
 description: Manage access and roles to a backend Java Spring Security Application using Java Web Tokens.
-courses: { csp: {week: 13, categories: [6.B]} }
+courses: { csa: {week: 13, categories: [6.B]} }
 categories: [C7.0]
 type: ccc
 ---
 
 ## Spring Security using Java Web Tokens Competition
+
 - [JWT Hello Articles](https://www.javainuse.com/spring/boot-jwt)
 
 ### JWT concepts via ChatGPT with added illustrations
+
 JSON Web Token (JWT) is a popular way to authenticate users in a web application. It is a compact, URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is digitally signed using JSON Web Signature (JWS).
 Here is an example of how you might use JWT for authentication in a JavaScript application:
 1. The client sends a login request to the server with the user's credentials (e.g., username and password).
@@ -32,6 +34,7 @@ The JWT consists of three parts, separated by dots (.). The first part is the he
 It is important to use HTTPS when transmitting JWTs to ensure that the JWT is not intercepted by an attacker. It is also a good idea to use short-lived JWTs (e.g., with an expiration time of one hour) and to refresh them frequently to reduce the risk of unauthorized access.
 
 #### Storing JWT
+
 There are a few different options for storing a JWT in a JavaScript application:
 1. Cookies: You can store the JWT in a cookie and send it back to the server with each request. This is a simple and widely-supported option, but it has some limitations. For example, you can't access cookies from JavaScript on a different domain, and some users may have cookies disabled in their browser settings.
 2. Local storage: You can store the JWT in the browser's local storage (localStorage) or session storage (sessionStorage). This option allows you to access the JWT from JavaScript on the same domain, but it is vulnerable to cross-site scripting (XSS) attacks, where an attacker can inject malicious code into your application and steal the JWT from the storage.
@@ -43,7 +46,9 @@ However, for this implementation we have used *** #3 HttpOnly Cookie ***.
 
 
 ### Key Configuration Areas
+
 #### Nginx configuration snippet (Client to this Server):
+
 > Nginx. Focus on add_header in preflight that allow cross domain (github.io) to access server.
 ```java
 location / {
@@ -64,6 +69,7 @@ location / {
 
 
 #### Java JWT / Authenticate API
+
 > Java. Focus on the response ResponseCookie to see type, path, age, and allowing for cross-origin (sameSite).
 ```java
 @PostMapping("/authenticate")
@@ -85,6 +91,7 @@ location / {
 ```
 
 #### Java WebMvcConfigurer addCorsMappings
+
 > Java. Focus on allowedOrigins, clients that can access this server server
 ```java
 @Override
@@ -94,6 +101,7 @@ location / {
 ```
 
 #### Java Security Config
+
 > Java. CORS enablement and headers to allow access to API endpoints from cross origin. 
 ```java
 .cors().and()
@@ -107,6 +115,7 @@ location / {
 ```
 
 #### Authenticate with JWT in a JavaScript application:
+
 > This example sends a POST request to the /authorize endpoint with the user's credentials in the request body. If the login was successful, the server will return a 200 OK response with the JWT set to Application properties.
 
 ```javascript
