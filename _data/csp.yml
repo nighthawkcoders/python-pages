@@ -94,6 +94,7 @@ Sprint3:
 Sprint4:
   title: Programming Depth and APCSP Project
   description: Trimester 2 will begin with Create Performance Task (CPT).  Great projects will contain frontend style using SASS, frontend JavaScript managing user events, and OOP in Python to create a database which will help exceed every CPT requirement.
+  start: 13
   end: 16
 Sprint5:
   title: Computer Systems, Netowrks, Impact of Computing
