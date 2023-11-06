@@ -5,7 +5,7 @@ introduction_tools: &introduction_tools |
     | Tool Setup      | 
     +-----------------+
        |
-       | VS Code, Anaconda, Jupyter, Python
+       | VS Code, Jupyter, Python
        v
     +-----------------+
     | VS Code, Develop|
@@ -33,7 +33,7 @@ introduction_tools: &introduction_tools |
     | Shared Code     |
     +-----------------+
        |
-       | Actions, Jekyll build
+       | Review Actions, Jekyll build
        v
     +-----------------+
     | GitHub Pages    |
@@ -92,13 +92,12 @@ Sprint3:
   start: 8
   end: 12
 Sprint4:
-  title: Algorithmic Programming 
-  description: Trimester 2 begins with student teaching and a focus on algorithms.  Each week a "Student Team" has a teaching assignment supported by College Board materials.  Additionally, the Teacher is providing Career Tech mini-labs that correspond to one or more topics for the week.  Use the two things together as you improve your learning experience, Frontend blog and Jupyter Notebooks.
-  start: 13
+  title: Programming Depth and APCSP Project
+  description: Trimester 2 will begin with Create Performance Task (CPT).  Great projects will contain frontend style using SASS, frontend JavaScript managing user events, and OOP in Python to create a database which will help exceed every CPT requirement.
   end: 16
 Sprint5:
-  title: OOP and Databases
-  description: Trimester 2 continues with student learning OOP and immediately applying it to Databases.  Each week a "Student Teams" will be working on frontend and backend elements for their Create Performance Task (CPT).  GitHub pages will be focus of instruction for frontend, OOP in Python will be instruction provided to create a database which will help exceed every CPT requirement.
+  title: Computer Systems, Netowrks, Impact of Computing
+  description: Trimester 2 continues with CPT project, but also focusses on 
   start: 17
   end: 20
 Sprint6:
