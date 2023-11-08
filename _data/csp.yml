@@ -92,22 +92,22 @@ Sprint3:
   start: 8
   end: 12
 Sprint4:
-  title: Programming Depth and APCSP Project
-  description: Trimester 2 will begin with Create Performance Task (CPT).  Great projects will contain frontend style using SASS, frontend JavaScript managing user events, and OOP in Python to create a database which will help exceed every CPT requirement.
+  title: Warm-up Data Abstraction Project, Create Performance Task (CPT) kickoff
+  description: Trimester 2 will begin with a Mini-project.  Great projects begin with frontend style.  This project will be using SASS, JavaScript, managing user events and representing Algorithms.  Tech talks during this period will be preparing for College Board Create Performance Task.
   start: 13
-  end: 16
+  end: 14
 Sprint5:
-  title: Computer Systems, Netowrks, Impact of Computing
-  description: Trimester 2 continues with CPT project, but also focusses on 
-  start: 17
-  end: 20
+  title: CPT design and development, Computer Systems, Networks, Impact of Computing
+  description: Trimester 2 continues with CPT project design and development.  Student Teaching will focus on College Board Units 4 and 5.
+  start: 15
+  end: 21
 Sprint6:
-  title: Create Performance Task (CPT) and N@tM 
+  title: Create Performance Task (CPT) and N@tM, MCQ Exam Practice 
   description: Trimester 2 concludes with student presenting their CPT project at N@tM.  Each person within "Student Teams" will have their own specialty within the student project that satisfied all their Create Performance Task requirements.   Student should be able to talk about design, coding, and present features of their portion of the system.
-  start: 21
+  start: 22
   end: 24
 Sprint7: 
-  title: Data Structures
+  title: Data Structures and Data Science
   description: This is the beginning of a college course following outline of CS113 Data Structures from Mira Costa CC.  Topics, using Python, include searching, sorting, hashing, algorithms, analysis, object-oriented design, collections, lists, stacks, queues, trees, sets, dictionaries, and graphs.
   start: 25
   end: 29
