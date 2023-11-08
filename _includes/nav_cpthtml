@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <td><img src="{{site.baseurl}}//images/logo.png" height="60" title="Frontend" alt=""></td>
+        <td><a href="{{site.baseurl}}/cpt/home">Home</a></td>
+        <td><a href="{{site.baseurl}}/cpt/db-a">DB-A</a></td>
+        <td><a href="{{site.baseurl}}/cpt/db-b">DB-B</a></td>
+        <td><a href="{{site.baseurl}}/cpt/jwt">JWT</a></td>
+        <td><a href="{{site.baseurl}}/cpt/sass">Sass</a></td>
+        <td><a href="{{site.baseurl}}/cpt/game">Images</a></td>
+        <td><a href="{{site.baseurl}}/cpt/game">Game</a></td>
+    </tr>
+</table>
