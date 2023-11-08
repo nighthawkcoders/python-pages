@@ -4,20 +4,20 @@ comments: false
 layout: post
 title: Binary Logic and Abstraction
 description: Real binary abstractions ASCII, Unicode, Images,logic gates, etc
-type: collab
+type: ccc
 courses: { csp: {week: 13} }
 categories: [1.D, 2.B, 3.C, C4.4]
 ---
 
 ## Binary, Data, Data Structures, Data Abstraction (ASCII, Unicode, Color Codes)
 
-Algorithms, Data and Data Structures go together.  It is ***required*** to have a data topic as you venture into Algorithms and Lessons.  This blog is a collection of binary, data and data structures that should be ***your data topic***!!! Use ***a data topic*** as you learn algorithms and programming.
+Algorithms, Data, Data Structures, and Visualization go together.  To start this project, it is ***required*** to have a data topic as you venture into Algorithms and Data mini project.  This blog is a collection of binary, data and data structures used as a sample and starter for your mini project.
 
-- ***Explore that topic in Computer Science manner*** (research, jupyter notebooks, frontend / backend coding)
-- Build a lesson that is more interesting, by explaining an algorithm and logic using a data topic.
+- ***Explore a topic in Computer Science manner*** (research, jupyter notebooks, frontend / backend coding)
+- Build a lesson that is more interesting, by explaining an algorithm and logic using data and visualization.
 - Teach with examples... ***Segment from [CS50](https://youtu.be/1tnj3UCkuxU?t=336) and go to minute 13:15.***
-- Tour the Code.  ***Use [Binary Frontend Code](https://nighthawkcoders.github.io/APCSP/frontend/binary)*** to get you started. <mark>Better clone APCSP project drag and drop _posts/2022-07-07-PBL-binary.md to your project and Debug</mark>
-- This Tech Talk will finish by ***reviewing hacks***, the remainder of this blog and Binary Frontend Code is part of your research.
+- Tour the Code.  ***Use [Binary Frontend Code](thttps://nighthawkcoders.github.io/teacher//c4.4/2023/09/14/javascript-binary-U2-1.html)*** to get you started. <mark>Obtain code form teacher project drag and drop _posts/2023-09-14-javascript-binary-U2-1.ipynb to your project and Debug</mark>
+- This Tech Talk will introduce requirements and finish with required ***hacks***.   Consider this blog and Binary Frontend Code as part of your research.
 
 ## Math in Binary
 
@@ -25,10 +25,10 @@ Learn binary by bitwise operators and more.  Shifting bits is a common computer 
 Look for shift on [w3schools](https://www.w3schools.com/js/js_bitwise.asp)
 
 ### Logic of Shift
->
-> Explore right and left shifts with binary numbers.  
 
-- In an arithmetic shift, the bits that are shifted out of either end are discarded.
+Explore right and left shifts with binary numbers.  
+
+- In an arithmetic shift, the bits that are shifted out of either end are discarded.  You need to be aware of how many bits you have to avoid overflow in math operations.
 - In a left arithmetic shift, zeros are shifted in on the right.
 ![shift]({{site.baseurl}}/images/binary/logic_of_shift.png)
 
@@ -45,7 +45,7 @@ How does the Power of 2 work?  What is a binary number?  What is Base2, Base10, 
 
 ### UI Concept/Design
 
-Conceptualize on a UI that will illustrate binary and decimal.  In learning these concepts, it is best to code and example to illustrate what is happening.
+Conceptualize a UI that will illustrate binary and decimal.  In learning these concepts, it is best to code and example to illustrate what is happening.
 
 - *n Right Shifts (divides by 2^n); n Left Shifts (multiplies by 2^n)*
 - Add buttons for  "<<"   and  " >>"
@@ -70,7 +70,7 @@ How are characters stored?  How many bits do they take?
 
 ### Character Concept/Design
 
-The ASCII value in picture should be change based off of the bits in evaluation you are doing.  Bits displayed, label, and evaluation would be specific to evaluation type:
+The ASCII value in picture should be changed based off of the bits in evaluation you are doing.  Bits displayed, label, and evaluation would be specific to evaluation type:
 ![ascii]({{site.baseurl}}/images/binary/ascii_label.png)
 *Original ASCII*
 
@@ -161,8 +161,8 @@ A logic gate can have two inputs (a,b) and by how changing these inputs it impac
   - XOR is true for 0 1, 1 0
 
 ### Practical Application
->
-> Logic gates are used everywhere
+
+Logic gates are used everywhere
 ![gates]({{site.baseurl}}/images/binary/logic_gate_application.png)
 
 ## Unsigned Addition
@@ -207,8 +207,7 @@ Basic concept is to invert/negate bits to produce negative. This allows numbers 
 ### Algorithm in Jinja2 to limit Bits per row
 
 ![conversion]({{site.baseurl}}/images/binary/binary_math_conversion_example.png)
-*8 images per row by Kylie Scharf*
-Modulo 8 algorithm add <tr> for every eight bits (code).
+*8 images per row by Kylie Scharf*, Modulo 8 algorithm add <tr> for every eight bits (code).
 
 ### Research Helpers
 
@@ -217,9 +216,12 @@ Modulo 8 algorithm add <tr> for every eight bits (code).
 
 ## Hacks
 
-Data, Data Structures, and Algorithms work together.  Data helps supply an interests/topic to an algorithm.  It will be expected that you have a topic as you go through various algorithms.
+Data, Data Structures, Algorithm, and Visualization work together.  Data helps supply an interests/topic to an algorithm.  It will be expected that you build topics above into your team mini project.
 
-- Use data abstraction (ie data structures) in your lesson
-- ***Make sure you teach/learn elements from this blog as you learn algorithms***
-- ***Add "Science" into your process*** (research, jupyter notebook, and ultimately running application)
-- ***Topics used in teaching, not listed in lesson/labs/homework need to be approved by Teacher.***  The topics above focus on data ideas from Unit 2 of AP Classroom.
+- This project will be two weeks long and will incorporate Ideation, Design, Feature Implementation, Integration, Test Complete phases.
+- Teaching will be limited to 5 minutes and some coordination and planning needs to occur to make sure we share unique topics.
+- Make sure you learn and code Algorithms and Visualization for all of the above, but perform extra efforts on what you will be teaching.
+- Add "Science" into your process*** (research, jupyter notebook, and ultimately running application)
+- Topics used for teaching, not listed in this blog need to be approved by Teacher.  
+- Topics need to focus on data ideas from Unit 2 of AP Classroom.
+- Visualization require style using GitHub Pages Theme techniques (SASS)
