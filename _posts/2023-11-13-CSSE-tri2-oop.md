@@ -2,9 +2,9 @@
 toc: false
 comments: false
 layout: post
-title: Innovation, CPT Project
+title: Innovation, CSSE Project
 permalink: /oop/home
-description: Innovation requirements for the Create Performance Task
+description: Convert Mario to Object Oriented Programming (OOP)
 type: collab
 courses: { csse: {week: 13} }
 ---
