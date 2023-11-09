@@ -3,7 +3,7 @@ toc: false
 comments: false
 layout: post
 title: Innovation, CPT Project
-permalink: /cpt/home
+permalink: /oop/home
 description: Innovation requirements for the Create Performance Task
 type: collab
 courses: { csse: {week: 13} }
