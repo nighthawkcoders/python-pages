@@ -76,44 +76,43 @@ GameObject is the base class for all objects in the game. It contains common att
 ```javascript
 // Common attributes, methods, prototype methods for all objects in the Game.
 class GameObject {
-  constructor(canvas, image, speedRatio) {
-    this.x = 0;
-    this.y = 0;
-    this.frame = 0;
-    this.canvas = canvas;
-    this.ctx = canvas.getContext('2d');
-    this.image = image;
-    this.width = image.width;  // Image() width (meta data)
-    this.height = image.height; // Image() height
-    this.aspect_ratio = this.width / this.height;
-    this.speedRatio = speedRatio;
-    this.speed = GameEnv.gameSpeed * this.speedRatio;
-    this.invert = true;
-    this.collisionWidth = 0;
-    this.collisionHeight = 0;
-    this.collisionData = {};
-    GameObject.gameObjects.push(this); 
-  }
-
-  destroy() { 
-    const index = GameObject.gameObjects.indexOf(this);
-    if (index !== -1) {
-        // Remove the canvas from the DOM
-        this.canvas.parentNode.removeChild(this.canvas);
-        GameObject.gameObjects.splice(index, 1);
+    constructor(canvas, config) {
+        this.x = config.x;
+        this.y = config.y;
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.image = config.image;
+        this.frame = config.frame;
+        this.width = config.width;
+        this.height = config.height;
+        this.aspect_ratio = this.width / this.height;
+        this.speedRatio = config.speedRatio;
+        this.speed = GameEnv.gameSpeed * this.speedRatio;
+        this.collisionWidth = 0;
+        this.collisionHeight = 0;
+        this.collisionData = {};
+        GameObject.gameObjects.push(this);
     }
-  }
 
-  update() {  }
-  draw() { }
-  size() {  }
-  isCollision(object) {  }
-  collisionAction(object) {  }
-  handleCollision(object) {
-    if (this.isCollision(object)) {
-        this.collisionAction(object);
+    destroy() {
+        const index = GameObject.gameObjects.indexOf(this);
+        if (index !== -1) {
+            // Remove the canvas from the DOM
+            this.canvas.parentNode.removeChild(this.canvas);
+            GameObject.gameObjects.splice(index, 1);
+        }
     }
-  }
+
+    update() { }
+    draw() { }
+    size() { }
+    isCollision(object) { }
+    collisionAction(object) { }
+    handleCollision(object) {
+        if (this.isCollision(object)) {
+            this.collisionAction(object);
+        }
+    }
 }
 ```
 
@@ -124,11 +123,11 @@ Player is a class specific to the player character, extending GameObject and add
 ```javascript
 // Create a class specifically for the player character, extending the GameObject class.
 class Player extends GameObject {
-    constructor(x, y, width, height) {
-        super(x, y, width, height);
-        this.speed = 5;
-        this.jumpHeight = 10;
-        this.health = 100;
+    constructor(canvas, config) {
+        super(canvas, config);
+        this.speed = config.speed;
+        this.jumpHeight = config.jumpHeight;
+        this.health = config.health;
 
         // Set up event listeners for user input
         document.addEventListener('keydown', this.handleKeyDown.bind(this));
