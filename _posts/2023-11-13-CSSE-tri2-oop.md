@@ -13,7 +13,7 @@ courses: { csse: {week: 13} }
 
 ## OOP Conversion
 
-Object is to covert functionalities of Imperative Style Mario Game to Object Oriented Programming.  We have many of the assets and now can improve on our OOP 
+Objective of project is to covert functionalities of "Imperative Style" Mario Game to "Object Oriented Programming" paradigm.  The assets and logic of functions can be reused as we improve to an OOP design.
 
 ### Game Environment
 
@@ -26,12 +26,14 @@ class GameEnv {
     static width;
     static currentLevel;
 
+    // sets up initial environment settings, like width and heigh
     static initialize(width, height) {
         this.width = width;
         this.height = height;
         // Additional initialization logic
     }
 
+    // initializes the game by creating the first level and loading its elements
     static startGame() {
         // Initialize or load the first level
         this.currentLevel = new Level();
@@ -43,33 +45,16 @@ class GameEnv {
         // Update game state, including all game objects
         for (const gameObject of this.gameObjects) {
             gameObject.update();
-        }
-        // Additional global update logic
-    }
-
-    static draw() {
-        // Draw all game objects
-        for (const gameObject of this.gameObjects) {
             gameObject.draw();
         }
-        // Additional global draw logic
     }
 
-    static handleCollisions() {
-        // Check for collisions between game objects
-        for (const gameObject of this.gameObjects) {
-            for (const otherObject of this.gameObjects) {
-                if (gameObject !== otherObject) {
-                    gameObject.handleCollision(otherObject);
-                }
-            }
-        }
-        // Additional collision handling logic
-    }
 }
 ```
 
 ### GameObject
+
+Common attributes, methods, prototype methods for all objects in the Game.
 
 ```javascript
 class GameObject {
@@ -89,18 +74,27 @@ class GameObject {
     this.collisionWidth = 0;
     this.collisionHeight = 0;
     this.collisionData = {};
+    GameObject.gameObjects.push(this); 
+  }
+
+  destroy() { 
+    const index = GameObject.gameObjects.indexOf(this);
+    if (index !== -1) {
+        // Remove the canvas from the DOM
+        this.canvas.parentNode.removeChild(this.canvas);
+        GameObject.gameObjects.splice(index, 1);
+    }
   }
 
   update() {  }
   draw() { }
   size() {  }
-  destroy() {  }
   isCollision(object) {  }
   collisionAction(object) {  }
   handleCollision(object) {
-      if (this.isCollision(object)) {
-          this.collisionAction(object);
-      }
+    if (this.isCollision(object)) {
+        this.collisionAction(object);
+    }
   }
 }
 ```
@@ -170,8 +164,7 @@ class Platform extends GameObject {
 }
 ```
 
-
-### Level
+### Game Level
 
 Store the assets and attributes of the Game at the specfice GameLevel.
 
@@ -199,8 +192,65 @@ class GameStateManager {
         this.currentState = "menu"; // Initial state
     }
 
-    changeState(newState) {
+    changeLevel(newLevel) {
         // Logic for transitioning between states
+        await GameInitializer.transitionToLevel(newLevel);
     }
 }
+```
+
+### Game Initializer
+
+Assist with setup and teardown between levels
+
+```javascript
+const GameInitializer = {
+    // ... (other init methods)
+
+    async transitionToLevel(newLevel) {
+        // Destroy existing game objects
+        this.destroyGameObjects();
+
+        // Load images for the new level
+        const levelImages = await this.loadLevelImages(newLevel);
+
+        // Initialize the new level with loaded images
+        const level = this.initLevel(newLevel, levelImages);
+        GameEnv.currentLevel = level;
+
+        // Create new game objects for the new level
+        this.createGameObjectsForLevel(level);
+    },
+
+    // Destroy all existing game objects
+    destroyGameObjects() {
+        for (const gameObject of GameObject.gameObjects) {
+            gameObject.destroy();
+        }
+    },
+
+    // Load images specific to the given level
+    async loadLevelImages(level) {
+        const levelImagePromises = level.imageFiles.map(file => loadImage(file));
+        return Promise.all(levelImagePromises);
+    },
+
+    // Initialize the level with loaded images
+    initLevel(level, levelImages) {
+        const initializedLevel = new GameLevel();
+
+        // Initialize and add platforms to the level
+        // (similar to what you did in initLevel previously)
+        // ...
+
+        return initializedLevel;
+    },
+
+    // Create game objects for the given level
+    createGameObjectsForLevel(level) {
+        // Create game objects based on the level's configuration
+        // (similar to what you did in initLevel previously)
+        // ...
+    }
+};
 ```
