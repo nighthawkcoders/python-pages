@@ -13,9 +13,9 @@ courses: { csse: {week: 13} }
 
 ## OOP Conversion
 
-Objective of project is to covert functionalities of "Imperative Style" Mario Game to "Object Oriented Programming" paradigm.  The assets and logic of functions can be reused as we improve to an OOP design.
+The objective of this project is to covert functionalities of "Imperative Style" Mario Game to "Object Oriented Programming" paradigm.
 
-The hierarchy is designed to promote reusability, encapsulation, and a clear separation of concerns. The GameEnv manages the overall game state, GameObject provides a common base for various game entities, and GameLevel holds level-specific assets and elements. The GameStateManager handles the transition between different game states.
+The hierarchy is designed to promote reusability, encapsulation, and a clear separation of entities. The GameEnv manages the overall game state, GameObject provides a common base for various game entities, and GameLevel holds level-specific assets and elements. The GameStateManager handles the transition between different game states.
 
 ```text
 GameEnv
@@ -23,6 +23,7 @@ GameEnv
 ├── GameObject
 │   ├── Player
 │   └── Platform
+│   └── ...
 │
 ├── GameLevel
 │   ├── platforms: Array
