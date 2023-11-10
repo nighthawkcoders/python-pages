@@ -176,8 +176,9 @@ Platform is a class for platforms that the player can stand on, extending GameOb
 ```javascript
 // Create a class for platforms that the player can stand on.
 class Platform extends GameObject {
-    constructor(x, y, width, height) {
-        super(x, y, width, height);
+    constructor(canvas, config) {
+        super(canvas, config);
+
     }
     // Additional platform-specific methods or properties
 }
