@@ -5,7 +5,7 @@ layout: post
 title: Innovation, CSSE Project
 permalink: /oop/home
 description: Convert Mario to Object Oriented Programming (OOP)
-type: collabx
+type: ccc
 courses: { csse: {week: 13} }
 ---
 
@@ -53,7 +53,7 @@ class GameEnv {
     // initializes the game by creating the first level and loading its elements
     static startGame() {
         // Initialize or load the first level
-        this.currentLevel = new Level();
+        this.currentLevel = new GameLevel();
         this.currentLevel.load(); // or generate
         // Additional game start logic
     }
