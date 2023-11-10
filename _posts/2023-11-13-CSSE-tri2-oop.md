@@ -5,7 +5,7 @@ layout: post
 title: Innovation, CSSE Project
 permalink: /oop/home
 description: Convert Mario to Object Oriented Programming (OOP)
-type: collab
+type: collabx
 courses: { csse: {week: 13} }
 ---
 
@@ -15,9 +15,25 @@ courses: { csse: {week: 13} }
 
 Objective of project is to covert functionalities of "Imperative Style" Mario Game to "Object Oriented Programming" paradigm.  The assets and logic of functions can be reused as we improve to an OOP design.
 
+The hierarchy is designed to promote reusability, encapsulation, and a clear separation of concerns. The GameEnv manages the overall game state, GameObject provides a common base for various game entities, and GameLevel holds level-specific assets and elements. The GameStateManager handles the transition between different game states.
+
+```text
+GameEnv
+│
+├── GameObject
+│   ├── Player
+│   └── Platform
+│
+├── GameLevel
+│   ├── platforms: Array
+│   └── enemies: Array
+│
+└── GameStateManager
+```
+
 ### Game Environment
 
-The GameEnv holds states and objects of the game including GameObjects, Screen extents, and Current GameLevel.
+GameEnv is the overarching environment class that holds the game state, objects, and the current game level.
 
 ```javascript
 class GameEnv {
@@ -54,9 +70,10 @@ class GameEnv {
 
 ### GameObject
 
-Common attributes, methods, prototype methods for all objects in the Game.
+GameObject is the base class for all objects in the game. It contains common attributes and methods.
 
 ```javascript
+// Common attributes, methods, prototype methods for all objects in the Game.
 class GameObject {
   constructor(canvas, image, speedRatio) {
     this.x = 0;
@@ -101,9 +118,10 @@ class GameObject {
 
 ### Player
 
-Create a class specifically for the player character, extending the GameObject class. Include properties such as player speed, jump height, and health.  Implement methods for player-specific actions like jumping, attacking, etc.
+Player is a class specific to the player character, extending GameObject and adding properties like speed, jump height, etc.
 
 ```javascript
+// Create a class specifically for the player character, extending the GameObject class.
 class Player extends GameObject {
     constructor(x, y, width, height) {
         super(x, y, width, height);
@@ -153,9 +171,10 @@ class Player extends GameObject {
 
 ### Platform
 
-Create a class for platforms that the player can stand on. Include properties such as width, height, and possibly a type (solid, moving, etc.).
+Platform is a class for platforms that the player can stand on, extending GameObject.
 
 ```javascript
+// Create a class for platforms that the player can stand on.
 class Platform extends GameObject {
     constructor(x, y, width, height) {
         super(x, y, width, height);
@@ -166,9 +185,10 @@ class Platform extends GameObject {
 
 ### Game Level
 
-Store the assets and attributes of the Game at the specfice GameLevel.
+GameLevel stores the assets and attributes specific to a particular level. It has properties like platforms and enemies.
 
 ```javascript
+// Store the assets and attributes of the Game at the specific GameLevel.
 class GameLevel {
     constructor() {
         this.platforms = []; // Array of platforms in the level
@@ -176,7 +196,10 @@ class GameLevel {
         // Additional level-specific properties
     }
 
+    // Load level data
     load() { /* Load level data */ }
+
+    // Generate level elements
     generate() { /* Generate level elements */ }
     // Additional level-specific methods
 }
@@ -184,14 +207,16 @@ class GameLevel {
 
 ### Game State Management
 
-Implement a system to manage different game states (e.g., menu, playing, game over).  This can help organize your game's flow and handle transitions between states.
+GameStateManager is responsible for managing different game states and handling transitions between them.
 
 ```javascript
+// Implement a system to manage different game states (e.g., menu, playing, game over).
 class GameStateManager {
     constructor() {
         this.currentState = "menu"; // Initial state
     }
 
+    // Change level and handle transitions
     changeLevel(newLevel) {
         // Logic for transitioning between states
         await GameInitializer.transitionToLevel(newLevel);
@@ -204,6 +229,7 @@ class GameStateManager {
 Assist with setup and teardown between levels
 
 ```javascript
+// Assist with setup and teardown between levels
 const GameInitializer = {
     // ... (other init methods)
 
